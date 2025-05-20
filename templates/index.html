@@ -7,16 +7,35 @@
     <section class="hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 hero-text slide-in-left">
-                    <h1>Connect with Your <br>Ideal B2B Clients</h1>
-                    <p class="hero-tagline">Opera Leads helps businesses scale through accurate, reliable, and actionable data solutions.</p>
-                    <div class="mt-5">
-                        <a href="{{ url_for('booking') }}" class="btn btn-primary me-3">Book a Free Consultation</a>
-                        <a href="{{ url_for('services') }}" class="btn btn-outline-primary">Explore Our Services</a>
+                <div class="col-lg-6 hero-text">
+                    <span class="hero-badge">Leading B2B Data Solutions Provider</span>
+                    <h1>Supercharge Your <span class="gradient-text">B2B Leads</span> Generation</h1>
+                    <p class="hero-tagline">Opera Leads helps businesses connect with high-quality prospects through accurate, reliable, and actionable data solutions.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>97%</h3>
+                            <p>Data Accuracy</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3M+</h3>
+                            <p>B2B Records</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>250+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="{{ url_for('booking') }}" class="btn-primary-gradient">Book a Free Consultation</a>
+                        <a href="{{ url_for('services') }}" class="btn-text">Explore Services <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-6 hero-image slide-in-right">
-                    <img src="https://pixabay.com/get/g2ae70e69aa86439438ad7c3f2eb501d92cec5a0309b40df0f4925e16ac84c90094b22321a6bf09a55c36a51a25ea2f5443912027a085457c10354c475175501c_1280.jpg" alt="Data Analytics Visualization" class="img-fluid">
+                <div class="col-lg-6 hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="https://pixabay.com/get/g2ae70e69aa86439438ad7c3f2eb501d92cec5a0309b40df0f4925e16ac84c90094b22321a6bf09a55c36a51a25ea2f5443912027a085457c10354c475175501c_1280.jpg" alt="Data Analytics Visualization" class="img-fluid">
+                        <div class="hero-shape-1"></div>
+                        <div class="hero-shape-2"></div>
+                    </div>
                 </div>
             </div>
         </div>
