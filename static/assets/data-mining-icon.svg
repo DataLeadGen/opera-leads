@@ -5,6 +5,10 @@
       <stop offset="0%" stop-color="#6377EE" />
       <stop offset="100%" stop-color="#5163D6" />
     </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#6377EE" flood-opacity="0.3"/>
     </filter>
@@ -13,27 +17,33 @@
   <!-- Background Circle -->
   <circle cx="40" cy="40" r="36" fill="#E6EAFF" />
   
-  <!-- Database Icon -->
+  <!-- Data Mining Elements -->
   <g filter="url(#shadow)">
-    <!-- Database Top -->
-    <path d="M40 16C27.85 16 18 20.47 18 26V30C18 35.52 27.85 40 40 40C52.15 40 62 35.52 62 30V26C62 20.47 52.15 16 40 16Z" fill="url(#gradient1)"/>
-    
-    <!-- Database Middle Sections -->
-    <path d="M40 44C27.85 44 18 39.52 18 34V42C18 47.52 27.85 52 40 52C52.15 52 62 47.52 62 42V34C62 39.52 52.15 44 40 44Z" fill="url(#gradient1)"/>
-    
-    <!-- Database Bottom Section -->
-    <path d="M40 56C27.85 56 18 51.52 18 46V54C18 59.52 27.85 64 40 64C52.15 64 62 59.52 62 54V46C62 51.52 52.15 56 40 56Z" fill="url(#gradient1)"/>
+    <!-- Database Icon -->
+    <path d="M40 22C30.0589 22 22 25.1324 22 29V51C22 54.866 30.0589 58 40 58C49.9411 58 58 54.866 58 51V29C58 25.1324 49.9411 22 40 22Z" fill="url(#gradient1)"/>
+    <path d="M58 37C58 40.866 49.9411 44 40 44C30.0589 44 22 40.866 22 37" stroke="white" stroke-width="1" stroke-linecap="round"/>
+    <path d="M58 44C58 47.866 49.9411 51 40 51C30.0589 51 22 47.866 22 44" stroke="white" stroke-width="1" stroke-linecap="round"/>
+    <ellipse cx="40" cy="29" rx="18" ry="7" fill="#5163D6"/>
   </g>
   
   <!-- Mining Elements -->
-  <circle cx="30" cy="32" r="2" fill="white" />
-  <circle cx="50" cy="32" r="2" fill="white" />
-  <circle cx="40" cy="28" r="2" fill="white" />
-  
-  <!-- Data Flow Lines -->
-  <line x1="30" y1="32" x2="40" y2="28" stroke="white" stroke-width="1.5" />
-  <line x1="40" y1="28" x2="50" y2="32" stroke="white" stroke-width="1.5" />
-  
-  <!-- Mining Pick Tools -->
-  <path d="M24 20L28 16M52 20L56 16" stroke="white" stroke-width="2" stroke-linecap="round" />
+  <g filter="url(#shadow)">
+    <!-- Pickaxe -->
+    <path d="M52 18L40 30" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M52 18L56 22" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Data Points/Gems -->
+    <circle cx="28" cy="36" r="2" fill="white"/>
+    <circle cx="36" cy="32" r="2" fill="white"/>
+    <circle cx="44" cy="38" r="2" fill="white"/>
+    <circle cx="32" cy="46" r="2" fill="white"/>
+    <circle cx="46" cy="48" r="2" fill="white"/>
+    
+    <!-- Connecting Lines Between Data Points -->
+    <path d="M28 36L36 32L44 38L32 46L46 48" stroke="white" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 1"/>
+    
+    <!-- Magnifying Glass -->
+    <circle cx="50" cy="34" r="6" stroke="url(#gradient2)" stroke-width="2" fill="none"/>
+    <line x1="54" y1="38" x2="58" y2="42" stroke="url(#gradient2)" stroke-width="2" stroke-linecap="round"/>
+  </g>
 </svg>
