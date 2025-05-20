@@ -77,51 +77,65 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container outer-container">
-            <a class="navbar-brand" href="{{ url_for('index') }}" aria-label="Opera Leads Home">
-                <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="container-fluid nav-container">
+            <div class="navbar-brand-wrapper">
+                <a class="navbar-brand" href="{{ url_for('index') }}" aria-label="Opera Leads Home">
+                    <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center main-menu">
-                    <li class="nav-item">
+                <div class="navbar-backdrop"></div>
+                <ul class="navbar-nav align-items-center main-menu">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
                         <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}" aria-current="{% if request.path == '/' %}page{% endif %}">
-                            Home
+                            <span class="nav-text">Home</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="150">
                         <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}" aria-current="{% if request.path == '/about' %}page{% endif %}">
-                            About
+                            <span class="nav-text">About</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
                         <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{{ url_for('services') }}" aria-current="{% if request.path == '/services' %}page{% endif %}">
-                            Services
+                            <span class="nav-text">Services</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
                         <a class="nav-link {% if request.path == '/testimonials' %}active{% endif %}" href="{{ url_for('testimonials') }}" aria-current="{% if request.path == '/testimonials' %}page{% endif %}">
-                            Testimonials
+                            <span class="nav-text">Testimonials</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
                         <a class="nav-link {% if request.path == '/faq' %}active{% endif %}" href="{{ url_for('faq') }}" aria-current="{% if request.path == '/faq' %}page{% endif %}">
-                            FAQ
+                            <span class="nav-text">FAQ</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="350">
                         <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{{ url_for('contact') }}" aria-current="{% if request.path == '/contact' %}page{% endif %}">
-                            Contact
-                        </a>
-                    </li>
-                    <li class="nav-item book-btn">
-                        <a class="nav-link btn-book" href="{{ url_for('booking') }}">
-                            Book Consultation
+                            <span class="nav-text">Contact</span>
+                            <span class="nav-dot"></span>
                         </a>
                     </li>
                 </ul>
+                <div class="navbar-cta" data-aos="fade-left" data-aos-delay="400">
+                    <a class="btn-consultation" href="{{ url_for('booking') }}">
+                        <span>Book Consultation</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>

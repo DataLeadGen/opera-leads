@@ -53,43 +53,111 @@
             </div>
             <div class="row services-container">
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3 class="service-title">Data Mining</h3>
+                                <p>Extract valuable insights and patterns from large datasets to inform your business decisions.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Mining</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Customer segmentation analysis</li>
+                                    <li><i class="fas fa-check"></i> Predictive lead scoring</li>
+                                    <li><i class="fas fa-check"></i> Market trend identification</li>
+                                    <li><i class="fas fa-check"></i> Competitive intelligence</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-mining" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Data Mining</h3>
-                        <p>Extract valuable insights and patterns from large datasets to inform your business decisions and marketing strategies.</p>
-                        <a href="{{ url_for('services') }}#data-mining" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card featured">
-                        <div class="service-icon">
-                            <i class="fas fa-envelope"></i>
+                    <div class="flip-card featured">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3 class="service-title">Email List Building</h3>
+                                <p>Create high-quality, verified email lists of potential clients tailored to your target market.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Email List Building</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Industry-specific targeting</li>
+                                    <li><i class="fas fa-check"></i> Decision-maker identification</li>
+                                    <li><i class="fas fa-check"></i> Verified contact information</li>
+                                    <li><i class="fas fa-check"></i> GDPR & CAN-SPAM compliant</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#email-list" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Email List Building</h3>
-                        <p>Create high-quality, verified email lists of potential clients tailored to your target market and business needs.</p>
-                        <a href="{{ url_for('services') }}#email-list" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-address-book"></i>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-address-book"></i>
+                                </div>
+                                <h3 class="service-title">Contact List Building</h3>
+                                <p>Develop comprehensive contact databases with accurate information for effective outreach.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Contact List Building</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Direct phone numbers</li>
+                                    <li><i class="fas fa-check"></i> Professional email addresses</li>
+                                    <li><i class="fas fa-check"></i> Job titles & departments</li>
+                                    <li><i class="fas fa-check"></i> Company size & location data</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#contact-list" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Contact List Building</h3>
-                        <p>Develop comprehensive contact databases with accurate information for effective outreach and relationship building.</p>
-                        <a href="{{ url_for('services') }}#contact-list" class="btn btn-sm btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-broom"></i>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-broom"></i>
+                                </div>
+                                <h3 class="service-title">Data Cleansing</h3>
+                                <p>Improve the quality of your existing databases by removing duplicates and correcting errors.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Cleansing</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Duplicate record removal</li>
+                                    <li><i class="fas fa-check"></i> Contact information validation</li>
+                                    <li><i class="fas fa-check"></i> Data standardization</li>
+                                    <li><i class="fas fa-check"></i> Database enhancement</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-cleansing" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Data Cleansing</h3>
-                        <p>Improve the quality of your existing databases by removing duplicates, correcting errors, and updating information.</p>
-                        <a href="{{ url_for('services') }}#data-cleansing" class="btn btn-sm btn-outline-primary">Learn More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 fade-in">
