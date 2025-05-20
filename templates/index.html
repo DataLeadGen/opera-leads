@@ -242,6 +242,77 @@
         </div>
     </section>
 
+    <!-- Testimonials Slider Section -->
+    <section class="testimonials-slider">
+        <div class="testimonial-background" style="background-image: url('{{ url_for('static', filename='assets/testimonial-slider-bg.svg') }}');">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <span class="section-badge">Testimonials</span>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                        <p class="section-subtitle">Discover how we've helped businesses like yours achieve remarkable results.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Opera Leads provided us with high-quality B2B leads that helped us increase our conversion rate by 30%. Their data accuracy is impressive, and their team is responsive and professional."</p>
+                            <div class="testimonial-author">
+                                <h5>Michael Richards</h5>
+                                <p>Marketing Director, TechSolutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial-text">"We've been working with Opera Leads for over a year, and they've consistently delivered excellent results. Their data cleansing service has significantly improved our database quality."</p>
+                            <div class="testimonial-author">
+                                <h5>Sarah Johnson</h5>
+                                <p>CEO, Growth Partners LLC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The email verification service from Opera Leads has reduced our bounce rate by 85%. Their attention to detail and commitment to data quality is outstanding. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <h5>David Chen</h5>
+                                <p>Sales Manager, InnovateX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('testimonials') }}" class="btn-view-all animated-btn">
+                        <span>View All Testimonials</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">

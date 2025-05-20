@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="400" viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C54E8" />
+      <stop offset="100%" stop-color="#0A42B7" />
+    </linearGradient>
+    <linearGradient id="gradientTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#6377EE" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="400" fill="#F5F7FF"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="40" fill="#E6EAFF"/>
+  <circle cx="900" cy="300" r="50" fill="#E6EAFF"/>
+  <circle cx="800" cy="100" r="30" fill="#E6EAFF"/>
+  <circle cx="200" cy="300" r="35" fill="#E6EAFF"/>
+  
+  <!-- Abstract Wave Patterns -->
+  <path d="M0 200 Q 250 150, 500 200 Q 750 250, 1000 200" stroke="#E6EAFF" stroke-width="15" fill="none"/>
+  <path d="M0 220 Q 250 170, 500 220 Q 750 270, 1000 220" stroke="#EEF1FF" stroke-width="10" fill="none"/>
+  
+  <!-- Quote Marks -->
+  <g transform="translate(150, 150)" filter="url(#shadow)">
+    <path d="M0 0 L30 0 L30 -30 L0 -30 L0 0 M0 -30 C0 -50, 30 -50, 30 -30" 
+        fill="url(#gradientTeal)" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(850, 250)" filter="url(#shadow)">
+    <path d="M0 0 L-30 0 L-30 -30 L0 -30 L0 0 M0 -30 C0 -50, -30 -50, -30 -30" 
+        fill="url(#gradientTeal)" opacity="0.8"/>
+  </g>
+  
+  <!-- Star Shapes -->
+  <g transform="translate(250, 320)">
+    <path d="M0 -15 L3 -5 L14 -5 L5 2 L8 12 L0 6 L-8 12 L-5 2 L-14 -5 L-3 -5 Z" fill="url(#gradientBlue)" opacity="0.7"/>
+  </g>
+  
+  <g transform="translate(550, 80)">
+    <path d="M0 -15 L3 -5 L14 -5 L5 2 L8 12 L0 6 L-8 12 L-5 2 L-14 -5 L-3 -5 Z" fill="url(#gradientBlue)" opacity="0.7"/>
+  </g>
+  
+  <g transform="translate(750, 350)">
+    <path d="M0 -15 L3 -5 L14 -5 L5 2 L8 12 L0 6 L-8 12 L-5 2 L-14 -5 L-3 -5 Z" fill="url(#gradientBlue)" opacity="0.7"/>
+  </g>
+  
+  <!-- Small Circles as Ratings -->
+  <circle cx="450" cy="270" r="8" fill="url(#gradientTeal)"/>
+  <circle cx="480" cy="270" r="8" fill="url(#gradientTeal)"/>
+  <circle cx="510" cy="270" r="8" fill="url(#gradientTeal)"/>
+  <circle cx="540" cy="270" r="8" fill="url(#gradientTeal)"/>
+  <circle cx="570" cy="270" r="8" fill="url(#gradientTeal)"/>
+</svg>
