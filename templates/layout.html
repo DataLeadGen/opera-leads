@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -73,48 +73,48 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container outer-container">
             <a class="navbar-brand" href="{{ url_for('index') }}" aria-label="Opera Leads Home">
-                <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54">
+                <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto align-items-center main-menu">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}" aria-current="{% if request.path == '/' %}page{% endif %}">
-                            <i class="fas fa-home d-none d-md-inline-block me-1"></i> Home
+                            Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}" aria-current="{% if request.path == '/about' %}page{% endif %}">
-                            <i class="fas fa-info-circle d-none d-md-inline-block me-1"></i> About
+                            About
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{{ url_for('services') }}" aria-current="{% if request.path == '/services' %}page{% endif %}">
-                            <i class="fas fa-cogs d-none d-md-inline-block me-1"></i> Services
+                            Services
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/testimonials' %}active{% endif %}" href="{{ url_for('testimonials') }}" aria-current="{% if request.path == '/testimonials' %}page{% endif %}">
-                            <i class="fas fa-star d-none d-md-inline-block me-1"></i> Testimonials
+                            Testimonials
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/faq' %}active{% endif %}" href="{{ url_for('faq') }}" aria-current="{% if request.path == '/faq' %}page{% endif %}">
-                            <i class="fas fa-question-circle d-none d-md-inline-block me-1"></i> FAQ
+                            FAQ
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{{ url_for('contact') }}" aria-current="{% if request.path == '/contact' %}page{% endif %}">
-                            <i class="fas fa-envelope d-none d-md-inline-block me-1"></i> Contact
+                            Contact
                         </a>
                     </li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="nav-link btn btn-primary text-white btn-consultation" href="{{ url_for('booking') }}">
-                            <i class="fas fa-calendar-check me-2"></i> Book Consultation
+                    <li class="nav-item book-btn">
+                        <a class="nav-link btn-book" href="{{ url_for('booking') }}">
+                            Book Consultation
                         </a>
                     </li>
                 </ul>
