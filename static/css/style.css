@@ -1074,7 +1074,7 @@ textarea.form-control {
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, var(--dark), #111827);
+    background: linear-gradient(to right, var(--dark), var(--dark-light));
     color: white;
     padding: 100px 0 40px;
     position: relative;
@@ -1084,37 +1084,59 @@ footer {
 footer::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: -10%;
+    left: -10%;
+    width: 70%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23132240' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23132240'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.1;
+    background: radial-gradient(circle, rgba(99, 119, 238, 0.03) 0%, rgba(99, 119, 238, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(0, 223, 216, 0.03) 0%, rgba(0, 223, 216, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .footer-logo {
     margin-bottom: 20px;
     position: relative;
+    z-index: 2;
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 55px;
     filter: brightness(1.1);
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover img {
+    transform: translateY(-5px);
 }
 
 .footer-info p {
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
-    font-size: 1rem;
-    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 350px;
 }
 
 .footer-heading {
     font-size: 1.25rem;
-    margin-bottom: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
     color: white;
     position: relative;
     padding-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-heading::after {
@@ -1122,10 +1144,10 @@ footer::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
-    border-radius: 3px;
+    background: var(--gradient-3);
+    border-radius: 30px;
 }
 
 .footer-links {
@@ -1135,7 +1157,7 @@ footer::before {
 }
 
 .footer-links li {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .footer-links a {
@@ -1143,16 +1165,23 @@ footer::before {
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
+    font-size: 0.95rem;
+    text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--secondary);
     transform: translateX(5px);
 }
 
 .footer-links a i {
-    opacity: 0.6;
-    font-size: 0.75rem;
+    font-size: 12px;
+    transition: var(--transition);
+    opacity: 0.7;
+}
+
+.footer-links a:hover i {
+    opacity: 1;
 }
 
 .footer-contact-info {
