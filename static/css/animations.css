@@ -12,6 +12,16 @@
   filter: brightness(1.05);
 }
 
+/* Service Card Hover Effects */
+.flip-card {
+  transition: all 0.4s ease;
+}
+
+.flip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(99, 119, 238, 0.15);
+}
+
 /* Pulse Animation on Service Icons */
 @keyframes pulse {
   0% {
@@ -30,10 +40,12 @@
 
 .service-icon img {
   transition: all 0.3s ease;
+  transform-origin: center center;
 }
 
 .service-icon img:hover {
   animation: pulse 1.5s ease infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 223, 216, 0.6));
 }
 
 /* Float Animation for Statistics */
@@ -56,6 +68,30 @@
 .stat-item:hover {
   animation: float 3s ease infinite;
   transform: translateY(-5px);
+}
+
+/* Testimonial Card Animations */
+.testimonial-card {
+  transition: all 0.5s ease;
+  transform-origin: center center;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(99, 119, 238, 0.2);
+}
+
+/* Client Logo Animation */
+.client-logo {
+  transition: all 0.4s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Shine Effect for CTA Buttons */
@@ -148,4 +184,25 @@
 
 .custom-logo:hover {
   filter: drop-shadow(0 0 5px rgba(99, 119, 238, 0.7));
+}
+
+/* Contact Icon Animation */
+.animated-icon {
+  transition: all 0.3s ease;
+  transform-origin: center center;
+}
+
+.animated-icon:hover {
+  transform: scale(1.15);
+  color: #0C54E8;
+}
+
+/* Social Icons Animation */
+.social-links a {
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: #00DFD8;
 }
