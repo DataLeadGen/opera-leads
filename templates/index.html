@@ -160,29 +160,66 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-spider"></i>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-spider"></i>
+                                </div>
+                                <h3 class="service-title">Data Scraping</h3>
+                                <p>Ethically extract valuable information from websites, Google Maps, and other online sources.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Scraping</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Website data extraction</li>
+                                    <li><i class="fas fa-check"></i> LinkedIn profile sourcing</li>
+                                    <li><i class="fas fa-check"></i> Google Maps business data</li>
+                                    <li><i class="fas fa-check"></i> Industry directories mining</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-scraping" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Data Scraping</h3>
-                        <p>Ethically extract valuable information from websites, Google Maps, and other online sources to expand your reach.</p>
-                        <a href="{{ url_for('services') }}#data-scraping" class="btn btn-sm btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-check-double"></i>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-check-double"></i>
+                                </div>
+                                <h3 class="service-title">Email Verification</h3>
+                                <p>Ensure your email campaigns reach real inboxes by verifying and validating email addresses.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Email Verification</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Syntax validation</li>
+                                    <li><i class="fas fa-check"></i> Domain verification</li>
+                                    <li><i class="fas fa-check"></i> Mailbox existence check</li>
+                                    <li><i class="fas fa-check"></i> Bounce risk assessment</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#email-verification" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
-                        <h3 class="service-title">Email Verification</h3>
-                        <p>Ensure your email campaigns reach real inboxes by verifying and validating email addresses in bulk.</p>
-                        <a href="{{ url_for('services') }}#email-verification" class="btn btn-sm btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5 fade-in">
-                <a href="{{ url_for('services') }}" class="btn btn-primary">View All Services</a>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
+                <a href="{{ url_for('services') }}" class="btn-view-all">
+                    <span>View All Services</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
             </div>
         </div>
     </section>
