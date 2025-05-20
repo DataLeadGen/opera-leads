@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d46b9"/>
+      <stop offset="100%" stop-color="#34c3ff"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="url(#logoGradient)" d="M45,10 C62.6731119,10 77,24.3268881 77,42 C77,59.6731119 62.6731119,74 45,74 C27.3268881,74 13,59.6731119 13,42 C13,24.3268881 27.3268881,10 45,10 Z M45,18 C31.7452033,18 21,28.7452033 21,42 C21,55.2547967 31.7452033,66 45,66 C58.2547967,66 69,55.2547967 69,42 C69,28.7452033 58.2547967,18 45,18 Z" transform="translate(-9 -24)"/>
+    <path fill="#2d46b9" d="M45,26 C53.836556,26 61,33.163444 61,42 C61,50.836556 53.836556,58 45,58 C36.163444,58 29,50.836556 29,42 C29,33.163444 36.163444,26 45,26 Z" transform="translate(-9 -24)"/>
+    <path fill="#FFFFFF" d="M45,33 C49.9705627,33 54,37.0294373 54,42 C54,46.9705627 49.9705627,51 45,51 C40.0294373,51 36,46.9705627 36,42 C36,37.0294373 40.0294373,33 45,33 Z" transform="translate(-9 -24)"/>
+    <text x="80" y="37" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2d46b9">Opera Leads</text>
+    <path fill="#34c3ff" d="M81,42 L188,42 L188,44 L81,44 Z" />
+  </g>
+</svg>

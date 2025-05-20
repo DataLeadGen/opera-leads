@@ -1,0 +1,370 @@
+{% extends 'layout.html' %}
+
+{% block title %}Services - Opera Leads B2B Data Solutions{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-5 mt-5">
+                    <h1>Our B2B Data Services</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>Comprehensive B2B Data Solutions</h2>
+                    <p class="lead">We specialize in providing accurate, reliable, and actionable data to help businesses connect with their ideal clients and drive growth.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="data-mining">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="service-title">Data Mining</h3>
+                        <p>Uncover valuable insights from large datasets to inform your business decisions and marketing strategies. We analyze and process data to identify patterns, trends, and opportunities that can give your business a competitive edge.</p>
+                        <ul class="mt-3">
+                            <li>Pattern recognition in large datasets</li>
+                            <li>Market trend analysis</li>
+                            <li>Customer behavior insights</li>
+                            <li>Competitive intelligence gathering</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="email-list">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="service-title">Email List Building</h3>
+                        <p>Create targeted, verified email lists of potential clients tailored to your specific business needs. Our email lists are meticulously researched and validated to ensure high deliverability and engagement rates.</p>
+                        <ul class="mt-3">
+                            <li>Industry-specific email databases</li>
+                            <li>Decision-maker contact information</li>
+                            <li>Verified and validated emails</li>
+                            <li>Custom-built lists by location, company size, and more</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="contact-list">
+                        <div class="service-icon">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <h3 class="service-title">Contact List Building</h3>
+                        <p>Develop comprehensive contact databases with accurate information for effective outreach. Our contact lists include detailed information to help you connect with potential clients through various channels.</p>
+                        <ul class="mt-3">
+                            <li>Complete contact details (phone, email, address)</li>
+                            <li>Professional profiles and job titles</li>
+                            <li>Company information and industry details</li>
+                            <li>Social media profiles and additional contact points</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="data-cleansing">
+                        <div class="service-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3 class="service-title">Data Cleansing & Cleaning</h3>
+                        <p>Improve the quality of your existing databases by removing duplicates, correcting errors, and updating information. Clean data leads to more effective marketing campaigns and better business decisions.</p>
+                        <ul class="mt-3">
+                            <li>Duplicate removal and consolidation</li>
+                            <li>Data standardization and formatting</li>
+                            <li>Verification and updating of contact information</li>
+                            <li>Error correction and data enrichment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="data-scraping">
+                        <div class="service-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h3 class="service-title">Data Scraping & Extraction</h3>
+                        <p>Ethically extract valuable information from websites, Google Maps, and other online sources to expand your reach. We use advanced techniques to gather publicly available data for your business use.</p>
+                        <ul class="mt-3">
+                            <li>Website data extraction</li>
+                            <li>Google Maps business information scraping</li>
+                            <li>Directory and listing data collection</li>
+                            <li>Social media profile information gathering</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="email-verification">
+                        <div class="service-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h3 class="service-title">Bulk Email Verification</h3>
+                        <p>Ensure your email campaigns reach real inboxes by verifying and validating email addresses in bulk. Our verification service improves deliverability rates and prevents bounces.</p>
+                        <ul class="mt-3">
+                            <li>Syntax and format validation</li>
+                            <li>Domain and server verification</li>
+                            <li>Mailbox existence checking</li>
+                            <li>Spam trap and disposable email detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="crm">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">Upgrade CRM Data & Cleaning</h3>
+                        <p>Enhance your CRM system with accurate, up-to-date information that improves your sales and marketing efforts. We clean, update, and enrich your existing CRM data for better results.</p>
+                        <ul class="mt-3">
+                            <li>CRM data standardization and formatting</li>
+                            <li>Missing information completion</li>
+                            <li>Contact information updating</li>
+                            <li>Data enrichment with additional insights</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="linkedin">
+                        <div class="service-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3 class="service-title">LinkedIn Scraping</h3>
+                        <p>Gather valuable insights from LinkedIn profiles and company pages to enhance your B2B networking and prospecting strategies. We ethically collect publicly available information from LinkedIn.</p>
+                        <ul class="mt-3">
+                            <li>Professional profile information collection</li>
+                            <li>Company details and employee insights</li>
+                            <li>Industry and position-specific data gathering</li>
+                            <li>Decision-maker identification and research</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="service-card h-100" id="google-maps">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="service-title">Google Maps Scraping</h3>
+                        <p>Extract business information from Google Maps to create targeted local lead lists. Our service helps you identify potential clients in specific geographic areas.</p>
+                        <ul class="mt-3">
+                            <li>Local business contact information</li>
+                            <li>Geographic targeting and segmentation</li>
+                            <li>Business category and specialty identification</li>
+                            <li>Hours of operation and additional business details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>Our Data Solution Process</h2>
+                    <p class="lead">We follow a systematic approach to ensure high-quality, accurate data for your business needs.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0 fade-in">
+                    <div class="process-card text-center p-4">
+                        <div class="process-icon mb-4">
+                            <div class="process-number">1</div>
+                        </div>
+                        <h4>Requirements Analysis</h4>
+                        <p>We begin by understanding your specific business goals, target audience, and data requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0 fade-in">
+                    <div class="process-card text-center p-4">
+                        <div class="process-icon mb-4">
+                            <div class="process-number">2</div>
+                        </div>
+                        <h4>Data Collection</h4>
+                        <p>Using advanced tools and techniques, we gather data from reliable sources according to your specifications.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0 fade-in">
+                    <div class="process-card text-center p-4">
+                        <div class="process-icon mb-4">
+                            <div class="process-number">3</div>
+                        </div>
+                        <h4>Verification & Cleaning</h4>
+                        <p>We verify and clean the collected data to ensure accuracy, completeness, and reliability.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 fade-in">
+                    <div class="process-card text-center p-4">
+                        <div class="process-icon mb-4">
+                            <div class="process-number">4</div>
+                        </div>
+                        <h4>Delivery & Support</h4>
+                        <p>The final data is delivered in your preferred format, with ongoing support to ensure your satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+                    <img src="https://pixabay.com/get/g3a65ad9ada76ec22d27f6f9e2bd83ec27c9690a70e3dabc8c0a3e99f06feadfa6f7368ed0a9b47afb6b626bc0fb718a883be99cb10411ba31c11284891eb6d1f_1280.jpg" alt="Business Growth Concept" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6 slide-in-right">
+                    <h2>Benefits of Our Data Solutions</h2>
+                    <p class="lead">Our services help you scale your business effectively by providing accurate, actionable data.</p>
+                    
+                    <div class="benefit-item d-flex mb-4">
+                        <div class="benefit-icon me-3">
+                            <i class="fas fa-bullseye fa-2x text-primary"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Targeted Outreach</h4>
+                            <p>Connect with decision-makers and qualified prospects that match your ideal customer profile, improving conversion rates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex mb-4">
+                        <div class="benefit-icon me-3">
+                            <i class="fas fa-clock fa-2x text-primary"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Time Efficiency</h4>
+                            <p>Save valuable time by eliminating the need for manual research and data collection, allowing you to focus on core business activities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex mb-4">
+                        <div class="benefit-icon me-3">
+                            <i class="fas fa-chart-line fa-2x text-primary"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Increased ROI</h4>
+                            <p>Improve the return on your marketing investments with high-quality data that leads to better engagement and conversion rates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item d-flex">
+                        <div class="benefit-icon me-3">
+                            <i class="fas fa-cogs fa-2x text-primary"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Scalable Solutions</h4>
+                            <p>Our data solutions grow with your business, providing consistent support as your needs and targets evolve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>Industries We Serve</h2>
+                    <p class="lead">Our data solutions are tailored to meet the specific needs of various industries.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                        </div>
+                        <h4>Technology</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-stethoscope fa-2x text-primary"></i>
+                        </div>
+                        <h4>Healthcare</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-university fa-2x text-primary"></i>
+                        </div>
+                        <h4>Finance</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-shopping-cart fa-2x text-primary"></i>
+                        </div>
+                        <h4>Retail</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-industry fa-2x text-primary"></i>
+                        </div>
+                        <h4>Manufacturing</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                        </div>
+                        <h4>Education</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-building fa-2x text-primary"></i>
+                        </div>
+                        <h4>Real Estate</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 mb-4 fade-in">
+                    <div class="industry-card text-center p-4">
+                        <div class="industry-icon mb-3">
+                            <i class="fas fa-briefcase fa-2x text-primary"></i>
+                        </div>
+                        <h4>Professional Services</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2>Ready to Enhance Your B2B Data Strategy?</h2>
+                    <p>Let's discuss how our specialized data solutions can help you connect with your ideal clients and drive business growth.</p>
+                    <div class="mt-5">
+                        <a href="{{ url_for('booking') }}" class="btn btn-light">Schedule a Consultation</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light">Contact Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
