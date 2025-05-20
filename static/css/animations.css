@@ -1,0 +1,151 @@
+/* Image Animation Effects */
+
+/* Base Animation Styles */
+.animated-image {
+  transition: all 0.5s ease;
+  transform-origin: center center;
+}
+
+/* Hover Effects */
+.animated-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Pulse Animation on Service Icons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.service-icon img {
+  transition: all 0.3s ease;
+}
+
+.service-icon img:hover {
+  animation: pulse 1.5s ease infinite;
+}
+
+/* Float Animation for Statistics */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.stat-item {
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  animation: float 3s ease infinite;
+  transform: translateY(-5px);
+}
+
+/* Shine Effect for CTA Buttons */
+.btn-primary-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-gradient::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(30deg);
+  transition: all 0.8s;
+  opacity: 0;
+}
+
+.btn-primary-gradient:hover::after {
+  opacity: 1;
+  left: 100%;
+  transition: all 0.8s;
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.8s ease-in-out forwards;
+}
+
+/* Image Gallery Hover Effects */
+.gallery-image {
+  transition: all 0.4s ease;
+  filter: grayscale(20%);
+}
+
+.gallery-image:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(99, 119, 238, 0.15);
+}
+
+/* Logo Subtle Animation */
+.custom-logo {
+  transition: filter 0.5s ease;
+}
+
+.custom-logo:hover {
+  filter: drop-shadow(0 0 5px rgba(99, 119, 238, 0.7));
+}
