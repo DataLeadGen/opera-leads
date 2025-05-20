@@ -43,7 +43,7 @@
         "@type": "Organization",
         "name": "Opera Leads",
         "url": "{{ request.url_root }}",
-        "logo": "{{ url_for('static', filename='assets/company-logo.svg', _external=True) }}",
+        "logo": "{{ url_for('static', filename='assets/logo.svg', _external=True) }}",
         "description": "Leading provider of B2B data solutions specializing in data mining, email list building, and contact list building.",
         "foundingDate": "2019",
         "founders": [
@@ -81,7 +81,7 @@
         <div class="container-fluid nav-container">
             <div class="navbar-brand-wrapper">
                 <a class="navbar-brand" href="{{ url_for('index') }}" aria-label="Opera Leads Home">
-                    <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
+                    <img src="{{ url_for('static', filename='assets/logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
                 </a>
             </div>
 
@@ -166,7 +166,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="footer-logo">
-                        <img src="{{ url_for('static', filename='assets/company-logo.svg') }}" alt="Opera Leads Logo" width="160" height="48">
+                        <img src="{{ url_for('static', filename='assets/logo.svg') }}" alt="Opera Leads Logo" width="160" height="48">
                     </div>
                     <div class="footer-info mt-4">
                         <p>Opera Leads is a leading provider of B2B data solutions. We help businesses connect with their ideal clients through accurate, reliable, and actionable data.</p>
