@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Creative Opera Leads Logo - Alternative Version -->
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#5163D6" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <linearGradient id="blendGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="50%" stop-color="#4F8AE5" />
+      <stop offset="100%" stop-color="#00DFD8" />
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Clip path for the icon -->
+    <clipPath id="hexClip">
+      <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" />
+    </clipPath>
+  </defs>
+  
+  <!-- Logo Symbol - Hexagonal Data Hub Design -->
+  <g id="logo-symbol">
+    <!-- Hexagon Background -->
+    <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" fill="#EAEEFF" />
+    
+    <!-- Hexagon Border -->
+    <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" stroke="url(#primaryGradient)" stroke-width="2" fill="none" />
+    
+    <!-- Inner Hexagon -->
+    <path d="M30 15L45 25V35L30 45L15 35V25L30 15Z" stroke="url(#accentGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Connection Lines -->
+    <line x1="30" y1="5" x2="30" y2="15" stroke="url(#blendGradient)" stroke-width="1.5" />
+    <line x1="55" y1="20" x2="45" y2="25" stroke="url(#blendGradient)" stroke-width="1.5" />
+    <line x1="55" y1="40" x2="45" y2="35" stroke="url(#blendGradient)" stroke-width="1.5" />
+    <line x1="30" y1="55" x2="30" y2="45" stroke="url(#blendGradient)" stroke-width="1.5" />
+    <line x1="5" y1="40" x2="15" y2="35" stroke="url(#blendGradient)" stroke-width="1.5" />
+    <line x1="5" y1="20" x2="15" y2="25" stroke="url(#blendGradient)" stroke-width="1.5" />
+    
+    <!-- Data Flow Visualization -->
+    <g clip-path="url(#hexClip)">
+      <!-- Data Flow Lines -->
+      <path d="M10 20C20 15 40 45 50 40" stroke="url(#accentGradient)" stroke-width="1" stroke-dasharray="1 2" />
+      <path d="M10 30C20 25 40 35 50 30" stroke="url(#primaryGradient)" stroke-width="1" stroke-dasharray="1 2" />
+      <path d="M10 40C20 35 40 25 50 20" stroke="url(#blendGradient)" stroke-width="1" stroke-dasharray="1 2" />
+      
+      <!-- Data Points -->
+      <circle cx="20" cy="15" r="1.5" fill="url(#accentGradient)" />
+      <circle cx="40" cy="15" r="1.5" fill="url(#primaryGradient)" />
+      <circle cx="15" cy="30" r="1.5" fill="url(#blendGradient)" />
+      <circle cx="45" cy="30" r="1.5" fill="url(#accentGradient)" />
+      <circle cx="20" cy="45" r="1.5" fill="url(#primaryGradient)" />
+      <circle cx="40" cy="45" r="1.5" fill="url(#blendGradient)" />
+    </g>
+    
+    <!-- Central Hub -->
+    <circle cx="30" cy="30" r="8" fill="url(#primaryGradient)" filter="url(#glow)" />
+    <circle cx="30" cy="30" r="5" fill="url(#blendGradient)" />
+    <circle cx="30" cy="30" r="2" fill="white" />
+  </g>
+  
+  <!-- Opera Leads Text with Bold Modern Typography -->
+  <g id="logo-text">
+    <!-- OPERA -->
+    <path d="M70 38C65.6 38 62.2 36.3 59.8 32.9C57.4 29.5 56.2 25 56.2 19.5C56.2 14 57.4 9.5 59.8 6.1C62.2 2.7 65.6 1 70 1C74.4 1 77.8 2.7 80.2 6.1C82.6 9.5 83.8 14 83.8 19.5C83.8 25 82.6 29.5 80.2 32.9C77.8 36.3 74.4 38 70 38ZM70 32C72.2 32 73.9 30.7 75.1 28.1C76.3 25.5 76.9 22.8 76.9 19.5C76.9 16.2 76.3 13.5 75.1 10.9C73.9 8.3 72.2 7 70 7C67.8 7 66.1 8.3 64.9 10.9C63.7 13.5 63.1 16.2 63.1 19.5C63.1 22.8 63.7 25.5 64.9 28.1C66.1 30.7 67.8 32 70 32Z" fill="url(#primaryGradient)" />
+    
+    <path d="M96 38C92.8 38 90.3 36.8 88.5 34.4C86.7 32 85.8 28.8 85.8 24.8V2H92.7V24.8C92.7 26.8 93.1 28.3 93.9 29.3C94.7 30.3 95.8 30.8 97.2 30.8C98.6 30.8 99.7 30.3 100.5 29.3C101.3 28.3 101.7 26.8 101.7 24.8V2H108.6V24.8C108.6 28.8 107.7 32 105.9 34.4C104.1 36.8 101.6 38 98.4 38H96Z" fill="url(#primaryGradient)" />
+    
+    <path d="M121 38C117.2 38 114.2 36.8 112 34.4C109.8 32 108.7 28.8 108.7 24.8V15.2C108.7 11.2 109.8 8 112 5.6C114.2 3.2 117.2 2 121 2H123C126.8 2 129.8 3.2 132 5.6C134.2 8 135.3 11.2 135.3 15.2V19H115.6V24.8C115.6 26.8 116 28.3 116.8 29.3C117.6 30.3 118.7 30.8 120.1 30.8C121.5 30.8 122.6 30.3 123.4 29.3C124.2 28.3 124.6 26.8 124.6 24.8V21H135.3V24.8C135.3 28.8 134.2 32 132 34.4C129.8 36.8 126.8 38 123 38H121Z" fill="url(#primaryGradient)" />
+    
+    <path d="M148 38C144.2 38 141.2 36.8 139 34.4C136.8 32 135.7 28.8 135.7 24.8V2H142.6V24.8C142.6 26.8 143 28.3 143.8 29.3C144.6 30.3 145.7 30.8 147.1 30.8C148.5 30.8 149.6 30.3 150.4 29.3C151.2 28.3 151.6 26.8 151.6 24.8V2H158.5V24.8C158.5 28.8 157.4 32 155.2 34.4C153 36.8 150 38 146.2 38H148Z" fill="url(#primaryGradient)" />
+    
+    <path d="M171 38C167.2 38 164.2 36.8 162 34.4C159.8 32 158.7 28.8 158.7 24.8V15.2C158.7 11.2 159.8 8 162 5.6C164.2 3.2 167.2 2 171 2H173C176.8 2 179.8 3.2 182 5.6C184.2 8 185.3 11.2 185.3 15.2V24.8C185.3 28.8 184.2 32 182 34.4C179.8 36.8 176.8 38 173 38H171Z" fill="url(#primaryGradient)" />
+    
+    <!-- LEADS -->
+    <path d="M195 38H188V2H195V38Z" fill="url(#blendGradient)" />
+    
+    <path d="M208 38C204.2 38 201.2 36.8 199 34.4C196.8 32 195.7 28.8 195.7 24.8V15.2C195.7 11.2 196.8 8 199 5.6C201.2 3.2 204.2 2 208 2H210C213.8 2 216.8 3.2 219 5.6C221.2 8 222.3 11.2 222.3 15.2V19H202.6V24.8C202.6 26.8 203 28.3 203.8 29.3C204.6 30.3 205.7 30.8 207.1 30.8C208.5 30.8 209.6 30.3 210.4 29.3C211.2 28.3 211.6 26.8 211.6 24.8V21H222.3V24.8C222.3 28.8 221.2 32 219 34.4C216.8 36.8 213.8 38 210 38H208Z" fill="url(#blendGradient)" />
+    
+    <path d="M235 38C231.2 38 228.2 36.8 226 34.4C223.8 32 222.7 28.8 222.7 24.8V15.2C222.7 11.2 223.8 8 226 5.6C228.2 3.2 231.2 2 235 2H237C240.8 2 243.8 3.2 246 5.6C248.2 8 249.3 11.2 249.3 15.2V24.8C249.3 28.8 248.2 32 246 34.4C243.8 36.8 240.8 38 237 38H235Z" fill="url(#blendGradient)" />
+    
+    <path d="M262 38C258.2 38 255.2 36.8 253 34.4C250.8 32 249.7 28.8 249.7 24.8V21H260.4V24.8C260.4 26.8 260.8 28.3 261.6 29.3C262.4 30.3 263.5 30.8 264.9 30.8C266.3 30.8 267.4 30.3 268.2 29.3C269 28.3 269.4 26.8 269.4 24.8V21.5C269.4 19.5 269 18 268.2 17C267.4 16 266.3 15.5 264.9 15.5H260.4V9H264.9C266.3 9 267.4 8.5 268.2 7.5C269 6.5 269.4 5 269.4 3V2C269.4 0 269 -1.5 268.2 -2.5C267.4 -3.5 266.3 -4 264.9 -4C263.5 -4 262.4 -3.5 261.6 -2.5C260.8 -1.5 260.4 0 260.4 2V5H249.7V2C249.7 -2 250.8 -5.2 253 -7.6C255.2 -10 258.2 -11.2 262 -11.2H264C267.8 -11.2 270.8 -10 273 -7.6C275.2 -5.2 276.3 -2 276.3 2V3C276.3 7 275.2 10.2 273 12.6C270.8 15 267.8 16.2 264 16.2V9C265.4 9 266.5 8.5 267.3 7.5C268.1 6.5 268.5 5 268.5 3V2C268.5 0 268.1 -1.5 267.3 -2.5C266.5 -3.5 265.4 -4 264 -4H262C260.6 -4 259.5 -3.5 258.7 -2.5C257.9 -1.5 257.5 0 257.5 2V3C257.5 5 257.9 6.5 258.7 7.5C259.5 8.5 260.6 9 262 9H266.5V15.5H262C260.6 15.5 259.5 16 258.7 17C257.9 18 257.5 19.5 257.5 21.5V24.8C257.5 26.8 257.9 28.3 258.7 29.3C259.5 30.3 260.6 30.8 262 30.8C263.4 30.8 264.5 30.3 265.3 29.3C266.1 28.3 266.5 26.8 266.5 24.8V21H277.2V24.8C277.2 28.8 276.1 32 273.9 34.4C271.7 36.8 268.7 38 264.9 38H262Z" fill="url(#blendGradient)" />
+  </g>
+  
+  <!-- Connecting Elements -->
+  <path d="M83 19.5C86 19.5 89 19.5 92 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M108 19.5C111 19.5 114 19.5 117 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M134 19.5C137 19.5 140 19.5 143 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M158 19.5C161 19.5 164 19.5 167 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  
+  <path d="M185 19.5C188 19.5 191 19.5 194 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M221 19.5C224 19.5 227 19.5 230 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M248 19.5C251 19.5 254 19.5 257 19.5" stroke="url(#accentGradient)" stroke-width="1.5" stroke-linecap="round" />
+</svg>

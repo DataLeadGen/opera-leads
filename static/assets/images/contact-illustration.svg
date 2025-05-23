@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Elements -->
+  <rect width="600" height="500" fill="white"/>
+  <circle cx="300" cy="250" r="200" fill="url(#paint0_radial)" fill-opacity="0.05"/>
+  
+  <!-- Envelope -->
+  <rect x="150" y="150" width="300" height="200" rx="10" fill="white" stroke="#6377EE" stroke-width="3"/>
+  <path d="M150 170L300 270L450 170" stroke="#6377EE" stroke-width="3"/>
+  
+  <!-- Message Bubbles -->
+  <rect x="200" y="100" width="120" height="60" rx="10" fill="#6377EE" fill-opacity="0.1"/>
+  <path d="M200 130L180 150L200 140" fill="#6377EE" fill-opacity="0.1"/>
+  
+  <rect x="280" y="380" width="120" height="60" rx="10" fill="#00DFD8" fill-opacity="0.1"/>
+  <path d="M400 410L420 430L400 420" fill="#00DFD8" fill-opacity="0.1"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="100" r="20" fill="#6377EE" fill-opacity="0.1"/>
+  <circle cx="450" cy="400" r="20" fill="#00DFD8" fill-opacity="0.1"/>
+  
+  <circle cx="100" cy="300" r="30" fill="#6377EE" fill-opacity="0.1"/>
+  <circle cx="500" cy="200" r="30" fill="#00DFD8" fill-opacity="0.1"/>
+  
+  <path d="M100 100C100 100 150 50 200 50C250 50 300 150 350 150C400 150 450 50 500 50C550 50 600 100 600 100" stroke="#6377EE" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <path d="M0 400C0 400 50 350 100 350C150 350 200 450 250 450C300 450 350 350 400 350C450 350 500 400 500 400" stroke="#00DFD8" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 250) rotate(90) scale(200)">
+      <stop stop-color="#6377EE"/>
+      <stop offset="1" stop-color="#6377EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

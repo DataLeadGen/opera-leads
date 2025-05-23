@@ -1,0 +1,749 @@
+{% extends 'layout.html' %}
+
+{% block title %}Sample Leads - Opera Leads{% endblock %}
+
+{% block meta_description %}Explore our sample leads data and see the quality of B2B leads we provide. View industry distribution, lead quality metrics, and sample lead previews.{% endblock %}
+
+{% block meta_keywords %}sample leads, B2B leads, lead data, lead quality, industry distribution, contact information, company information{% endblock %}
+
+{% block og_title %}Sample Leads - Opera Leads{% endblock %}
+
+{% block og_description %}Explore our comprehensive sample leads data showcasing the quality and depth of information we provide in our B2B lead generation services.{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1 class="page-title">Sample Leads</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Sample Leads</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="shape-divider"></div>
+    </section>
+
+    <!-- Lead Data Insights Section -->
+    <section class="lead-insights py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Data Insights</span>
+                    <h2 class="section-title">Lead Data Insights</h2>
+                    <p class="section-subtitle">Explore visualizations of our lead data quality and distribution.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Industry Distribution -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industry Distribution</h3>
+                        <p>Our lead database covers a wide range of industries, allowing you to target the specific sectors that matter most to your business.</p>
+                        <div class="chart-container">
+                            <canvas id="industryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lead Quality Metrics -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Lead Quality Metrics</h3>
+                        <p>We maintain high data quality standards, ensuring that the leads we provide have verified contact information and complete profiles.</p>
+                        <div class="chart-container">
+                            <canvas id="qualityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Monthly Lead Generation -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Monthly Lead Generation</h3>
+                        <p>Our lead database is continuously growing, with thousands of new verified leads added each month.</p>
+                        <div class="chart-container">
+                            <canvas id="monthlyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Size Distribution -->
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Company Size Distribution</h3>
+                        <p>Our database includes companies of all sizes, from small businesses to large enterprises, allowing for precise targeting.</p>
+                        <div class="chart-container">
+                            <canvas id="companySizeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Lead Categories Section -->
+    <section class="lead-categories py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Lead Categories</span>
+                    <h2 class="section-title">Specialized Lead Categories</h2>
+                    <p class="section-subtitle">Explore our comprehensive range of industry-specific lead categories designed to meet your exact business needs.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Influencers -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3>Influencers</h3>
+                        <p>Connect with influential content creators, bloggers, and social media personalities to amplify your brand message.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Name</li>
+                            <li><i class="fas fa-check-circle"></i> Social Platforms</li>
+                            <li><i class="fas fa-check-circle"></i> Follower Count</li>
+                            <li><i class="fas fa-check-circle"></i> Engagement Rate</li>
+                            <li><i class="fas fa-check-circle"></i> Content Focus</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Non-Profit & Aged Care -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Non-Profit & Aged Care</h3>
+                        <p>High-quality lead data for non-profit organizations and aged care facilities to support your outreach efforts.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Organization Name</li>
+                            <li><i class="fas fa-check-circle"></i> Mission Focus</li>
+                            <li><i class="fas fa-check-circle"></i> Annual Budget</li>
+                            <li><i class="fas fa-check-circle"></i> Key Decision Makers</li>
+                            <li><i class="fas fa-check-circle"></i> Location</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Real Estate -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Real Estate</h3>
+                        <p>Premium leads for real estate professionals, brokers, and investors to help expand your network and opportunities.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Name</li>
+                            <li><i class="fas fa-check-circle"></i> License Number</li>
+                            <li><i class="fas fa-check-circle"></i> Agency</li>
+                            <li><i class="fas fa-check-circle"></i> Property Types</li>
+                            <li><i class="fas fa-check-circle"></i> Transaction Volume</li>
+                            <li><i class="fas fa-check-circle"></i> Location</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Fitness Industry -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Fitness Industry</h3>
+                        <p>Qualified leads for fitness professionals and gym businesses looking to expand their client base.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Business Name</li>
+                            <li><i class="fas fa-check-circle"></i> Specialization</li>
+                            <li><i class="fas fa-check-circle"></i> Client Volume</li>
+                            <li><i class="fas fa-check-circle"></i> Services Offered</li>
+                            <li><i class="fas fa-check-circle"></i> Location</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Construction -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>Construction</h3>
+                        <p>Targeted leads for the construction industry to help grow your business network and client base.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Company Name</li>
+                            <li><i class="fas fa-check-circle"></i> Specialization</li>
+                            <li><i class="fas fa-check-circle"></i> Project Scale</li>
+                            <li><i class="fas fa-check-circle"></i> Service Area</li>
+                            <li><i class="fas fa-check-circle"></i> License Information</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- B2B Services -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>B2B Services</h3>
+                        <p>Quality B2B leads for businesses looking to expand their corporate client network.</p>
+                        <h5>Typical Fields</h5>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Company Name</li>
+                            <li><i class="fas fa-check-circle"></i> Industry</li>
+                            <li><i class="fas fa-check-circle"></i> Company Size</li>
+                            <li><i class="fas fa-check-circle"></i> Decision Makers</li>
+                            <li><i class="fas fa-check-circle"></i> Technologies Used</li>
+                            <li><i class="fas fa-check-circle"></i> Contact Information</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Lead Preview Section -->
+    <section class="lead-preview py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Lead Preview</span>
+                    <h2 class="section-title">Sample Lead Preview</h2>
+                    <p class="section-subtitle">Below is a preview of the type of data we can provide, with details anonymized for privacy.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="table-responsive">
+                        <table class="table table-hover lead-table">
+                            <thead>
+                                <tr>
+                                    <th>Job Title</th>
+                                    <th>Industry</th>
+                                    <th>Company Size</th>
+                                    <th>Location</th>
+                                    <th>Contact Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chief Technology Officer</td>
+                                    <td>Technology</td>
+                                    <td>201-500</td>
+                                    <td>San Francisco, CA</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Marketing Director</td>
+                                    <td>Healthcare</td>
+                                    <td>501-1000</td>
+                                    <td>Boston, MA</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>VP of Operations</td>
+                                    <td>Manufacturing</td>
+                                    <td>1000+</td>
+                                    <td>Chicago, IL</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Procurement Manager</td>
+                                    <td>Retail</td>
+                                    <td>51-200</td>
+                                    <td>Atlanta, GA</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Chief Financial Officer</td>
+                                    <td>Finance</td>
+                                    <td>201-500</td>
+                                    <td>New York, NY</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Human Resources Director</td>
+                                    <td>Education</td>
+                                    <td>501-1000</td>
+                                    <td>Austin, TX</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td>IT Manager</td>
+                                    <td>Technology</td>
+                                    <td>51-200</td>
+                                    <td>Seattle, WA</td>
+                                    <td><span class="badge bg-success">Verified</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="lead-note text-center mt-3" data-aos="fade-up">
+                        <p><em>Note: This is sample data. Actual leads will include full company names, contact names, email addresses, phone numbers, and more.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Data Fields Section -->
+    <section class="data-fields py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Data Fields</span>
+                    <h2 class="section-title">Available Data Fields</h2>
+                    <p class="section-subtitle">We provide comprehensive information for each lead in our database.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fields-card">
+                        <div class="fields-icon">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <h3>Contact Information</h3>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> First Name & Last Name</li>
+                            <li><i class="fas fa-check-circle"></i> Job Title</li>
+                            <li><i class="fas fa-check-circle"></i> Direct Email Address</li>
+                            <li><i class="fas fa-check-circle"></i> Direct Phone Number</li>
+                            <li><i class="fas fa-check-circle"></i> LinkedIn Profile URL</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Company Information -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fields-card">
+                        <div class="fields-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Company Information</h3>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Company Name</li>
+                            <li><i class="fas fa-check-circle"></i> Industry</li>
+                            <li><i class="fas fa-check-circle"></i> Company Size</li>
+                            <li><i class="fas fa-check-circle"></i> Revenue Range</li>
+                            <li><i class="fas fa-check-circle"></i> Company Website</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Location & Additional Data -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fields-card">
+                        <div class="fields-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location & Additional Data</h3>
+                        <ul class="field-list">
+                            <li><i class="fas fa-check-circle"></i> Full Address</li>
+                            <li><i class="fas fa-check-circle"></i> City, State, Country</li>
+                            <li><i class="fas fa-check-circle"></i> Postal Code</li>
+                            <li><i class="fas fa-check-circle"></i> Technology Stack</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Fields Available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Testimonials</span>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Don't just take our word for it - hear from businesses that have used our lead data.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The quality of leads we received from Opera Leads was exceptional. Over 95% of the emails were deliverable, and we saw a 30% increase in our response rate compared to our previous provider."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVvcGxlLHBvcnRyYWl0fHx8fHx8MTY4NjY4NzM4OA&ixlib=rb-4.0.3&q=80&w=300" alt="Sarah Johnson" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="author-info">
+                                <h5>Sarah Johnson</h5>
+                                <p>Sales Manager, MedTech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"We needed highly targeted leads in the healthcare sector, and Opera Leads delivered exactly what we needed. The data was accurate, comprehensive, and helped us close several major deals."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVvcGxlLHBvcnRyYWl0fHx8fHx8MTY4NjY4NzQyOQ&ixlib=rb-4.0.3&q=80&w=300" alt="Michael Chen" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <p>Business Development, Global Enterprises</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="cta-card text-center" data-aos="fade-up">
+                        <h2>Ready to get high-quality leads for your business?</h2>
+                        <p>Request a free consultation to discuss your specific lead generation needs.</p>
+                        <a href="{{ url_for('booking') }}" class="btn-primary-gradient">Book a Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Sample Leads Page Specific Styles */
+    .insight-card, .category-card, .fields-card {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .insight-card:hover, .category-card:hover, .fields-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .insight-icon, .category-icon, .fields-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .insight-icon i, .category-icon i, .fields-icon i {
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .chart-container {
+        height: 200px;
+        margin-top: 20px;
+    }
+    
+    .field-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    
+    .field-list li {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .field-list li i {
+        color: #6e8efb;
+        margin-right: 10px;
+    }
+    
+    .lead-table {
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .lead-table thead {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #fff;
+    }
+    
+    .lead-table th {
+        font-weight: 600;
+        padding: 15px;
+        border: none;
+    }
+    
+    .lead-table td {
+        padding: 15px;
+        border-color: #f0f0f0;
+    }
+    
+    .lead-table tbody tr:hover {
+        background-color: #f8f9ff;
+    }
+    
+    .testimonial-card {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+    }
+    
+    .testimonial-content {
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+    }
+    
+    .author-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+    }
+    
+    .author-info h5 {
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .author-info p {
+        margin-bottom: 0;
+        color: #6c757d;
+        font-size: 14px;
+    }
+    
+    .cta-card {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        border-radius: 12px;
+        padding: 50px;
+        color: #fff;
+    }
+    
+    .cta-card h2 {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .cta-card p {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    
+    .btn-primary-gradient {
+        background: linear-gradient(to right, #fff, #f8f9ff);
+        color: #6e8efb;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+    }
+    
+    .btn-primary-gradient:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Industry Distribution Chart
+        const industryCtx = document.getElementById('industryChart').getContext('2d');
+        const industryChart = new Chart(industryCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Other'],
+                datasets: [{
+                    data: [30, 20, 15, 12, 10, 13],
+                    backgroundColor: [
+                        '#6e8efb',
+                        '#a777e3',
+                        '#63c7ff',
+                        '#ff7eb6',
+                        '#ffa64c',
+                        '#7ae7c7'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Lead Quality Metrics Chart
+        const qualityCtx = document.getElementById('qualityChart').getContext('2d');
+        const qualityChart = new Chart(qualityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Email Accuracy', 'Phone Accuracy', 'Profile Completeness'],
+                datasets: [{
+                    label: 'Percentage',
+                    data: [97, 95, 92],
+                    backgroundColor: [
+                        '#6e8efb',
+                        '#a777e3',
+                        '#63c7ff'
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+        
+        // Monthly Lead Generation Chart
+        const monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
+        const monthlyChart = new Chart(monthlyCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'New Leads',
+                    data: [5000, 7500, 8200, 9800, 12000, 15000],
+                    borderColor: '#6e8efb',
+                    backgroundColor: 'rgba(110, 142, 251, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        
+        // Company Size Distribution Chart
+        const sizeCtx = document.getElementById('companySizeChart').getContext('2d');
+        const sizeChart = new Chart(sizeCtx, {
+            type: 'pie',
+            data: {
+                labels: ['1-50', '51-200', '201-500', '501-1000', '1000+'],
+                datasets: [{
+                    data: [15, 25, 30, 20, 10],
+                    backgroundColor: [
+                        '#6e8efb',
+                        '#a777e3',
+                        '#63c7ff',
+                        '#ff7eb6',
+                        '#ffa64c'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

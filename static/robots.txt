@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and test areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /test-images/
+
+# Allow search engines to crawl important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /testimonials.html
+Allow: /faq.html
+Allow: /sample-leads.html
+Allow: /contact.html
+Allow: /booking.html
+
+# Sitemap location
+Sitemap: https://operaleads.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10

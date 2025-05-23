@@ -1,0 +1,324 @@
+/* SVG Background Elements */
+
+.svg-wave-divider {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    z-index: 1;
+}
+
+.svg-wave-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.svg-blob-bg {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.svg-blob-1 {
+    top: 10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    animation: float 20s ease-in-out infinite alternate;
+}
+
+.svg-blob-2 {
+    bottom: 10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    animation: float 25s ease-in-out infinite alternate-reverse;
+}
+
+.svg-dots-pattern {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.svg-dots-top-right {
+    top: 5%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+}
+
+.svg-dots-bottom-left {
+    bottom: 5%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+}
+
+.svg-curved-line {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.svg-curved-line-1 {
+    top: 30%;
+    left: 10%;
+    width: 300px;
+    height: 100px;
+    transform: rotate(10deg);
+}
+
+.svg-curved-line-2 {
+    bottom: 20%;
+    right: 10%;
+    width: 300px;
+    height: 100px;
+    transform: rotate(-10deg);
+}
+
+.svg-circle-grid {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.svg-circle-grid-1 {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    animation: rotate 60s linear infinite;
+}
+
+.svg-abstract-shape {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.svg-abstract-shape-1 {
+    bottom: 10%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    animation: float 30s ease-in-out infinite alternate;
+}
+
+/* Section with SVG background */
+.section-with-svg-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero section with SVG background */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../assets/svg/dots-pattern.svg');
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('../assets/svg/wave-divider.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* About section with SVG background */
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('../assets/svg/circle-grid.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Services section with SVG background */
+.services-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background-image: url('../assets/svg/blob-1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+    animation: float 20s ease-in-out infinite alternate;
+}
+
+.services-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background-image: url('../assets/svg/blob-2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+    animation: float 25s ease-in-out infinite alternate-reverse;
+}
+
+/* Testimonials section with SVG background */
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/svg/dots-pattern.svg');
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* FAQ section with SVG background */
+.faq-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 300px;
+    height: 100px;
+    background-image: url('../assets/svg/curved-line.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+.faq-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 300px;
+    height: 100px;
+    background-image: url('../assets/svg/curved-line.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(-10deg);
+}
+
+/* Contact section with SVG background */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background-image: url('../assets/svg/abstract-shape.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .svg-blob-1, .svg-blob-2 {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .svg-dots-top-right, .svg-dots-bottom-left {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .svg-curved-line-1, .svg-curved-line-2 {
+        width: 200px;
+        height: 70px;
+    }
+    
+    .svg-circle-grid-1 {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .svg-abstract-shape-1 {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .hero-section::before,
+    .about-section::before,
+    .services-section::before,
+    .services-section::after,
+    .testimonials-section::before,
+    .faq-section::before,
+    .faq-section::after,
+    .contact-section::before {
+        opacity: 0.05;
+    }
+}

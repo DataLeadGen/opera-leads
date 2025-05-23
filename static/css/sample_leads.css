@@ -1,0 +1,246 @@
+/* Sample Leads Page Specific Styles */
+
+/* Card Styles */
+.insight-card, .category-card, .fields-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.insight-card:hover, .category-card:hover, .fields-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+.insight-icon, .category-icon, .fields-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.insight-icon i, .category-icon i, .fields-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Chart Container */
+.chart-container {
+    height: 200px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Field Lists */
+.field-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.field-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.field-list li i {
+    color: #6e8efb;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Lead Table */
+.lead-table {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.lead-table thead {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+}
+
+.lead-table th {
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+}
+
+.lead-table td {
+    padding: 15px;
+    border-color: #f0f0f0;
+}
+
+.lead-table tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.testimonial-content {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.author-info h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.author-info p {
+    margin-bottom: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* CTA Section */
+.cta-card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 12px;
+    padding: 50px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cta-card h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-card p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn-primary-gradient {
+    background: linear-gradient(to right, #fff, #f8f9ff);
+    color: #6e8efb;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Spacing */
+.lead-insights, .lead-categories, .lead-preview, .data-fields, .testimonials-section, .cta-section {
+    padding: 80px 0;
+}
+
+.lead-categories, .data-fields {
+    background-color: #f8f9ff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .insight-card, .category-card, .fields-card, .testimonial-card {
+        margin-bottom: 20px;
+    }
+    
+    .cta-card {
+        padding: 30px;
+    }
+    
+    .lead-insights, .lead-categories, .lead-preview, .data-fields, .testimonials-section, .cta-section {
+        padding: 50px 0;
+    }
+}
+
+/* Badge Styles */
+.badge.bg-success {
+    background-color: #28a745 !important;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Lead Note */
+.lead-note {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 15px;
+}
+
+/* Category Card Headings */
+.category-card h3, .fields-card h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.category-card h5 {
+    color: #6e8efb;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Section Badges */
+.section-badge {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Section Subtitles */
+.section-subtitle {
+    color: #6c757d;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}

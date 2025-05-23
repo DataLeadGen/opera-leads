@@ -1,0 +1,137 @@
+/* Gallery and Image Styles */
+
+/* Success Stories Gallery */
+.success-stories-gallery {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.gallery-overlay p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* Testimonial Author Images */
+.testimonial-author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--primary-light);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Client Photos in Testimonial Cards */
+.client-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary-light);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Client Logo Images */
+.client-logo-wrapper {
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.client-logo-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.client-logo {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo-wrapper p {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* Image Captions */
+.image-caption {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .client-logo {
+        height: 100px;
+    }
+    
+    .testimonial-author-img {
+        width: 50px;
+        height: 50px;
+    }
+}
