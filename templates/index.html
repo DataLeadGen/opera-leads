@@ -1,0 +1,619 @@
+{% extends 'layout.html' %}
+
+{% block title %}Opera Leads - B2B Data Solutions for Growing Businesses{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text" data-aos="fade-right" data-aos-delay="100">
+                    <span class="hero-badge">Leading B2B Data Solutions Provider</span>
+                    <h1>Supercharge Your <span class="gradient-text">B2B Leads</span> Generation</h1>
+                    <p class="hero-tagline">Opera Leads helps businesses connect with high-quality prospects through accurate, reliable, and actionable data solutions.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <h3>97%</h3>
+                            <p>Data Accuracy</p>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                            <h3>3M+</h3>
+                            <p>B2B Records</p>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+                            <h3>250+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
+                        <a href="{{ url_for('booking') }}" class="btn-primary-gradient">Book a Free Consultation</a>
+                        <a href="{{ url_for('services') }}" class="btn-text">Explore Services <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image-wrapper">
+                        <img src="{{ url_for('static', filename='assets/hero-graphic.svg') }}" alt="Data Analytics Visualization" class="img-fluid animated-image">
+                        <div class="hero-shape-1"></div>
+                        <div class="hero-shape-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="services">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <span class="section-badge">Our Services</span>
+                    <h2 class="section-title">Our Specialized B2B Data Services</h2>
+                    <p class="section-subtitle">We provide comprehensive data solutions to help businesses connect with potential clients effectively.</p>
+                </div>
+            </div>
+            <div class="row services-container">
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/data-mining-icon.svg') }}" alt="Data Mining Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Data Mining</h3>
+                                <p>Extract valuable insights and patterns from large datasets to inform your business decisions.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Mining</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Dynamic Market Trend Analysis  </li>   
+                                    <li><i class="fas fa-check"></i>Advanced Customer Segmentation </li>
+                                    <li><i class="fas fa-check"></i> Predictive Lead Scoring Models </li>
+                                    <li><i class="fas fa-check"></i> Real-Time Competitive Intelligence </li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-mining" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flip-card featured">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/email-list-icon.svg') }}" alt="Email List Building Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Email List Building</h3>
+                                <p>Create high-quality, verified email lists of potential clients tailored to your target market.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Email List Building</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Industry-specific targeting</li>
+                                    <li><i class="fas fa-check"></i> Decision-maker identification</li>
+                                    <li><i class="fas fa-check"></i> Verified contact information</li>
+                                    <li><i class="fas fa-check"></i> GDPR & CAN-SPAM compliant</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#email-list" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/contact-list-icon.svg') }}" alt="Contact List Building Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Contact List Building</h3>
+                                <p>Develop comprehensive contact databases with accurate information for effective outreach.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Contact List Building</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Direct phone numbers</li>
+                                    <li><i class="fas fa-check"></i> Professional email addresses</li>
+                                    <li><i class="fas fa-check"></i> Job titles & departments</li>
+                                    <li><i class="fas fa-check"></i> Company size & location data</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#contact-list" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/data-cleansing-icon.svg') }}" alt="Data Cleansing Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Data Cleansing</h3>
+                                <p>Improve the quality of your existing databases by removing duplicates and correcting errors.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Cleansing</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Duplicate record removal</li>
+                                    <li><i class="fas fa-check"></i> Contact information validation</li>
+                                    <li><i class="fas fa-check"></i> Data standardization</li>
+                                    <li><i class="fas fa-check"></i> Database enhancement</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-cleansing" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/data-scraping-icon.svg') }}" alt="Data Scraping Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Data Scraping</h3>
+                                <p>Ethically extract valuable information from websites, Google Maps, and other online sources.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Data Scraping</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Website data extraction</li>
+                                    <li><i class="fas fa-check"></i> LinkedIn profile sourcing</li>
+                                    <li><i class="fas fa-check"></i> Google Maps business data</li>
+                                    <li><i class="fas fa-check"></i> Industry directories mining</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#data-scraping" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="service-icon">
+                                    <img src="{{ url_for('static', filename='assets/images/email-verification-icon.svg') }}" alt="Email Verification Icon" width="60" height="60">
+                                </div>
+                                <h3 class="service-title">Email Verification</h3>
+                                <p>Ensure your email campaigns reach real inboxes by verifying and validating email addresses.</p>
+                                <div class="flip-indicator">
+                                    <span>View Details</span>
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Email Verification</h3>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Syntax validation</li>
+                                    <li><i class="fas fa-check"></i> Domain verification</li>
+                                    <li><i class="fas fa-check"></i> Mailbox existence check</li>
+                                    <li><i class="fas fa-check"></i> Bounce risk assessment</li>
+                                </ul>
+                                <a href="{{ url_for('services') }}#email-verification" class="back-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
+                <a href="{{ url_for('services') }}" class="btn-view-all">
+                    <span>View All Services</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section Preview -->
+    <section class="about bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 about-image-container slide-in-left">
+                    <img src="{{ url_for('static', filename='assets/business-team-illustration.svg') }}" alt="Opera Leads Team" class="about-image img-fluid animated-image">
+                </div>
+                <div class="col-lg-6 about-text slide-in-right">
+                    <h2>About Opera Leads</h2>
+                    <p class="lead">Founded in 2019 by Zakir Hussain, Opera Leads is a leading provider of B2B data solutions.</p>
+                    <p>Under Zakir's visionary leadership, we help businesses connect with their ideal clients through accurate, reliable, and actionable data. Our experienced team of 10 skilled professionals, including 8 core team members, guarantees precision and quality in every project.</p>
+                    <p>We use cutting-edge solutions and advanced tools to deliver innovative data strategies tailored to your business needs.</p>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="testimonials-slider">
+        <div class="testimonial-background" style="background-image: url({{ url_for('static', filename='assets/testimonial-slider-bg.svg') }});">   
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <span class="section-badge">Testimonials</span>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                        <p class="section-subtitle">Discover how we've helped businesses like yours achieve remarkable results.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Opera Leads provided us with high-quality B2B leads that helped us increase our conversion rate by 30%. Their data accuracy is impressive, and their team is responsive and professional."</p>
+                            <div class="testimonial-author">
+                                <img src="https://xsgames.co/randomusers/assets/avatars/male/1.jpg" alt="Michael Richards" class="testimonial-author-img">
+                                <div>
+                                    <h5>Michael Richards</h5>
+                                    <p>Marketing Director, TechSolutions Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial-text">"We've been working with Opera Leads for over a year, and they've consistently delivered excellent results. Their data cleansing service has significantly improved our database quality."</p>
+                            <div class="testimonial-author">
+                                <img src="https://xsgames.co/randomusers/assets/avatars/female/1.jpg" alt="Sarah Johnson" class="testimonial-author-img">
+                                <div>
+                                    <h5>Sarah Johnson</h5>
+                                    <p>CEO, Growth Partners LLC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The email verification service from Opera Leads has reduced our bounce rate by 85%. Their attention to detail and commitment to data quality is outstanding. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://xsgames.co/randomusers/assets/avatars/male/2.jpg" alt="David Chen" class="testimonial-author-img">
+                                <div>
+                                    <h5>David Chen</h5>
+                                    <p>Sales Manager, InnovateX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('testimonials') }}" class="btn-view-all animated-btn">
+                        <span>View All Testimonials</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 mb-md-0 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="100">0</div>
+                        <p class="stat-description">% Data Accuracy</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="500">0</div>
+                        <p class="stat-description">+ Satisfied Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="6">0</div>
+                        <p class="stat-description">Years of Experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="10">0</div>
+                        <p class="stat-description">Million+ Data Points</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Preview -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>What Our Clients Say</h2>
+                    <p class="lead">Discover how Opera Leads has helped businesses grow and achieve results through data-driven strategies.</p>
+                </div>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 fade-in">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        Opera Leads provided us with an extremely accurate and well-curated list of potential clients which helped us increase our conversion rate by 40%. Their attention to detail and quick delivery is commendable.
+                                    </div>
+                                    <div class="client-info">
+                                        <img src="https://xsgames.co/randomusers/assets/avatars/female/2.jpg" alt="Sarah Johnson" class="client-photo rounded-circle">
+                                        <div class="client-details">
+                                            <h5>Sarah Johnson</h5>
+                                            <p>Marketing Director, TechSolutions Inc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4 fade-in">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        Working with Zakir and his team was a game-changer for our outreach efforts. Their data cleansing service transformed our outdated CRM into a powerful sales tool with accurate, up-to-date information.
+                                    </div>
+                                    <div class="client-info">
+                                        <img src="https://xsgames.co/randomusers/assets/avatars/male/3.jpg" alt="David Chen" class="client-photo rounded-circle">
+                                        <div class="client-details">
+                                            <h5>David Chen</h5>
+                                            <p>CEO, Growth Partners LLC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        The email verification service from Opera Leads improved our deliverability rates significantly. We now see over 98% inbox placement and much higher engagement with our campaigns.
+                                    </div>
+                                    <div class="client-info">
+                                        <img src="https://xsgames.co/randomusers/assets/avatars/female/3.jpg" alt="Melissa Torres" class="client-photo rounded-circle">
+                                        <div class="client-details">
+                                            <h5>Melissa Torres</h5>
+                                            <p>Email Marketing Manager, Global Solutions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        Opera Leads' data mining services uncovered valuable insights about our target market that we hadn't previously identified. This has completely transformed our approach to client acquisition.
+                                    </div>
+                                    <div class="client-info">
+                                        <img src="https://xsgames.co/randomusers/assets/avatars/male/4.jpg" alt="James Wilson" class="client-photo rounded-circle">
+                                        <div class="client-details">
+                                            <h5>James Wilson</h5>
+                                            <p>Business Development Director, Innovate Corp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="text-center mt-5 fade-in">
+                <a href="{{ url_for('testimonials') }}" class="btn btn-primary">Read More Testimonials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section class="data-visual-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Visualization" class="img-fluid rounded">
+                    <div class="image-caption text-center mt-2">
+                        <small>Data-driven business decisions in action</small>
+                    </div>
+                </div>
+                <div class="col-lg-6 slide-in-right">
+                    <h2>Data-Driven Growth Strategies</h2>
+                    <p class="lead">Make informed decisions with accurate data and analytics tailored to your business goals.</p>
+                    <p>Our data solutions empower you to identify trends, reach the right prospects, and build meaningful business relationships. With Opera Leads, you gain a competitive edge through precise targeting and qualified lead generation.</p>
+                    <div class="data-visual-animation mt-4 mb-4">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="bar-container" style="height: 150px; width: 30px; background-color: #f1f3f5; position: relative;">
+                                        <div class="bar" data-height="60" style="width: 30px; background-color: var(--primary); position: absolute; bottom: 0; height: 0%; transition: height 1s ease;"></div>
+                                    </div>
+                                    <span class="mt-2">Q1</span>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="bar-container" style="height: 150px; width: 30px; background-color: #f1f3f5; position: relative;">
+                                        <div class="bar" data-height="75" style="width: 30px; background-color: var(--primary); position: absolute; bottom: 0; height: 0%; transition: height 1s ease;"></div>
+                                    </div>
+                                    <span class="mt-2">Q2</span>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="bar-container" style="height: 150px; width: 30px; background-color: #f1f3f5; position: relative;">
+                                        <div class="bar" data-height="85" style="width: 30px; background-color: var(--primary); position: absolute; bottom: 0; height: 0%; transition: height 1s ease;"></div>
+                                    </div>
+                                    <span class="mt-2">Q3</span>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="bar-container" style="height: 150px; width: 30px; background-color: #f1f3f5; position: relative;">
+                                        <div class="bar" data-height="95" style="width: 30px; background-color: var(--primary); position: absolute; bottom: 0; height: 0%; transition: height 1s ease;"></div>
+                                    </div>
+                                    <span class="mt-2">Q4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-3">Average conversion rate growth using our data</p>
+                    </div>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients and Partners Section -->
+    <section class="clients-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <span class="section-badge">Our Clients</span>
+                    <h2 class="section-title">Trusted by Industry Leaders</h2>
+                    <p class="section-subtitle">We've helped companies of all sizes achieve remarkable results with our data solutions.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="client-logos-container">
+                        <div class="row">
+                            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="client-logo-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="TechSolutions" class="img-fluid client-logo">
+                                    <p class="text-center mt-2">TechSolutions</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="client-logo-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="GrowthPartners" class="img-fluid client-logo">
+                                    <p class="text-center mt-2">GrowthPartners</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="client-logo-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="InnovateX" class="img-fluid client-logo">
+                                    <p class="text-center mt-2">InnovateX</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                                <div class="client-logo-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="DataSphere" class="img-fluid client-logo">
+                                    <p class="text-center mt-2">DataSphere</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Gallery -->
+    <section class="success-stories-gallery py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <span class="section-badge">Success Stories</span>
+                    <h2 class="section-title">Our Impact in Action</h2>
+                    <p class="section-subtitle">See how our data solutions have transformed businesses across industries.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Financial Services Success" class="img-fluid rounded">
+                            <div class="gallery-overlay">
+                                <h4>Financial Services</h4>
+                                <p>40% increase in qualified leads</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tech Startup Growth" class="img-fluid rounded">
+                            <div class="gallery-overlay">
+                                <h4>Tech Startup</h4>
+                                <p>65% growth in customer acquisition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Education Sector Case Study" class="img-fluid rounded">
+                            <div class="gallery-overlay">
+                                <h4>Education Sector</h4>
+                                <p>52% improvement in enrollment rates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ url_for('services') }}" class="btn-view-all animated-btn">
+                    <span>View All Case Studies</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2>Ready to Grow Your Business?</h2>
+                    <p>Schedule a free 15-minute consultation to discuss how our data solutions can help you connect with potential clients and drive growth.</p>
+                    <div class="mt-5">
+                        <a href="{{ url_for('booking') }}" class="btn btn-light">Book Consultation</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

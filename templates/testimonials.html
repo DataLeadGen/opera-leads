@@ -1,0 +1,349 @@
+{% extends 'layout.html' %}
+
+{% block title %}Client Testimonials - Opera Leads Success Stories{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-5 mt-5" data-aos="fade-up">
+                    <span class="page-badge">Success Stories</span>
+                    <h1>Client Testimonials</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-shape-1"></div>
+        <div class="header-shape-2"></div>
+    </section>
+
+    <!-- Testimonials Header -->
+    <section class="testimonials-header">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Discover how Opera Leads has helped businesses across various industries achieve their growth objectives through reliable data solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Testimonials -->
+    <section class="featured-testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 fade-in">
+                    <div class="testimonial-card featured-testimonial">
+                        <div class="testimonial-text">
+                            Opera Leads transformed our outreach strategy completely. Their data mining services helped us identify key decision-makers in our target market, and the quality of their contact information was exceptional. Within two months of working with them, we increased our qualified lead generation by 65% and closed 12 major deals directly attributable to their data.
+                        </div>
+                        <div class="client-info mt-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Client" class="client-image">
+                            <div class="client-details">
+                                <h5>Michael Rodriguez</h5>
+                                <p>VP of Sales, TechInnovate Solutions</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5 fade-in">
+                    <div class="testimonial-card featured-testimonial">
+                        <div class="testimonial-text">
+                            We had been struggling with outdated CRM data for years before partnering with Opera Leads. Their data cleansing service was a game-changer for us. They identified and corrected errors, removed duplicates, and enriched our database with valuable information. Our sales team can now focus on selling rather than hunting for accurate contact details. The ROI has been tremendous.
+                        </div>
+                        <div class="client-info mt-4">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Client" class="client-image">
+                            <div class="client-details">
+                                <h5>Jennifer Stevens</h5>
+                                <p>Marketing Director, Global Healthcare Inc.</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Grid -->
+    <section class="testimonial-grid bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            The email verification service from Opera Leads saved us from countless bounced emails and potential blacklisting. Their thorough verification process ensured our email campaigns reached real inboxes, resulting in a 42% increase in open rates and significantly improved deliverability.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>David Chang</h5>
+                                <p>Email Marketing Manager, Retail Solutions</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            Zakir and his team at Opera Leads provided us with an incredibly accurate list of decision-makers in the manufacturing sector. The precision targeting allowed us to run a focused campaign that resulted in a 35% response rate – far above industry standards.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>Samantha Wilson</h5>
+                                <p>Business Development Director, Industrial Solutions Ltd.</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            Their Google Maps scraping service helped us identify local businesses for our expansion strategy. The data was comprehensive and up-to-date, allowing us to efficiently target potential partners in new geographic regions.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>Robert Johnson</h5>
+                                <p>Expansion Manager, Food Services International</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            Opera Leads' contact list building service provided us with a goldmine of potential clients. The quality of contacts was exceptional, with accurate phone numbers, emails, and job titles. This has significantly improved our outbound calling success rate.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>Emma Parker</h5>
+                                <p>Sales Director, SaaS Enterprise Solutions</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            We've worked with several data providers before, but Opera Leads stands out for their attention to detail and commitment to quality. Their data cleansing services have helped us maintain a healthy, up-to-date database that drives our marketing efforts.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>Thomas Baker</h5>
+                                <p>CRM Administrator, Financial Services Group</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-text">
+                            The LinkedIn scraping service provided by Opera Leads gave us access to valuable information about decision-makers in our target companies. This has been instrumental in our account-based marketing strategy, helping us tailor our approach to each prospect.
+                        </div>
+                        <div class="client-info mt-3">
+                            <div class="client-details">
+                                <h5>Andrew Mills</h5>
+                                <p>ABM Strategist, Enterprise Tech Solutions</p>
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonial Section -->
+    <section class="video-testimonial">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2>Client Success Stories</h2>
+                    <p class="lead">Hear directly from our clients about their experience working with Opera Leads.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+                    <div class="video-wrapper rounded overflow-hidden shadow-lg" style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <!-- This is a placeholder for a video testimonial. In a real implementation, this would be replaced with an actual embedded video. -->
+                        <div style="background-color: #1a1a2e; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <i class="fas fa-play-circle fa-5x text-primary mb-3"></i>
+                            <p class="text-white">Client Video Testimonial</p>
+                            <p class="text-white-50">Video would be embedded here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 slide-in-right">
+                    <h3>How Opera Leads Helped GrowthTech Increase Their Qualified Leads by 78%</h3>
+                    <p class="lead text-primary mb-4">A Case Study</p>
+                    <p>GrowthTech, a leading SaaS provider, was struggling to identify and connect with decision-makers in their target market. After partnering with Opera Leads, they received a comprehensive database of verified contacts that helped them:</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Increase their qualified lead generation by 78%</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Reduce their customer acquisition cost by 42%</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Improve their sales cycle efficiency by 35%</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Achieve a 325% ROI on their data investment</li>
+                    </ul>
+                    <p class="mt-3">The accurate, up-to-date data provided by Opera Leads allowed GrowthTech to focus their resources on prospects with the highest potential, resulting in significant growth in just six months.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="client-logos bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>Trusted by Businesses Worldwide</h2>
+                    <p class="lead">Join the hundreds of companies that rely on Opera Leads for their data needs.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row align-items-center text-center">
+                        <!-- These would be replaced with actual client logos. Using placeholder text for demonstration. -->
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">TechCorp</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">GrowthX</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">DataPro</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">LeadGen</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">SalesUp</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4 fade-in">
+                            <div class="client-logo p-3">
+                                <div class="fw-bold text-primary">InnovateCo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Stats -->
+    <section class="testimonial-stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number animate-number" data-value="98">0</div>
+                        <p class="stat-description">% Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number animate-number" data-value="80">0</div>
+                        <p class="stat-description">% Average ROI Increase</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number animate-number" data-value="75">0</div>
+                        <p class="stat-description">% Repeat Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number animate-number" data-value="45">0</div>
+                        <p class="stat-description">% Lead Conversion Improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2>Ready to Achieve Similar Results?</h2>
+                    <p>Join the hundreds of satisfied clients who have transformed their business with our data solutions. Schedule a consultation today to discuss your specific needs.</p>
+                    <div class="mt-5">
+                        <a href="{{ url_for('booking') }}" class="btn btn-light">Schedule Consultation</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

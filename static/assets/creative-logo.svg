@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Creative Opera Leads Logo -->
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#5163D6" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <linearGradient id="blendGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#00DFD8" />
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Logo Symbol - Dynamic Data Flow Design -->
+  <g id="logo-symbol">
+    <!-- Main Circle with Gradient -->
+    <circle cx="30" cy="30" r="25" fill="url(#primaryGradient)" opacity="0.1" />
+    
+    <!-- Outer Ring -->
+    <path d="M30 5C16.2 5 5 16.2 5 30C5 43.8 16.2 55 30 55C43.8 55 55 43.8 55 30C55 16.2 43.8 5 30 5ZM30 50C18.95 50 10 41.05 10 30C10 18.95 18.95 10 30 10C41.05 10 50 18.95 50 30C50 41.05 41.05 50 30 50Z" fill="url(#primaryGradient)" />
+    
+    <!-- Dynamic Data Flow Lines -->
+    <path d="M30 15C21.7 15 15 21.7 15 30C15 38.3 21.7 45 30 45" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round" />
+    <path d="M30 15C38.3 15 45 21.7 45 30C45 38.3 38.3 45 30 45" stroke="url(#primaryGradient)" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 3" />
+    
+    <!-- Data Points -->
+    <circle cx="30" cy="15" r="3" fill="url(#blendGradient)" />
+    <circle cx="15" cy="30" r="2" fill="url(#accentGradient)" />
+    <circle cx="30" cy="45" r="3" fill="url(#blendGradient)" />
+    <circle cx="45" cy="30" r="2" fill="url(#primaryGradient)" />
+    
+    <!-- Central Element -->
+    <path d="M30 20C24.5 20 20 24.5 20 30C20 35.5 24.5 40 30 40C35.5 40 40 35.5 40 30C40 24.5 35.5 20 30 20ZM30 36C26.7 36 24 33.3 24 30C24 26.7 26.7 24 30 24C33.3 24 36 26.7 36 30C36 33.3 33.3 36 30 36Z" fill="url(#blendGradient)" filter="url(#glow)" />
+    
+    <!-- Pulse Animation (represented as concentric circles) -->
+    <circle cx="30" cy="30" r="18" stroke="url(#accentGradient)" stroke-width="0.5" stroke-dasharray="1 2" opacity="0.6" />
+    <circle cx="30" cy="30" r="22" stroke="url(#accentGradient)" stroke-width="0.5" stroke-dasharray="1 3" opacity="0.4" />
+  </g>
+  
+  <!-- Opera Leads Text with Creative Typography -->
+  <g id="logo-text">
+    <!-- Opera - Stylized with flowing connection -->
+    <path d="M75 40C70.6 40 67.2 38.5 64.8 35.5C62.4 32.5 61.2 28.5 61.2 23.5C61.2 18.5 62.4 14.5 64.8 11.5C67.2 8.5 70.6 7 75 7C79.4 7 82.8 8.5 85.2 11.5C87.6 14.5 88.8 18.5 88.8 23.5C88.8 28.5 87.6 32.5 85.2 35.5C82.8 38.5 79.4 40 75 40Z" fill="url(#primaryGradient)" opacity="0.1" />
+    <path d="M75 35C72.2 35 70 33.8 68.5 31.4C67 29 66.25 26 66.25 22.5C66.25 19 67 16 68.5 13.6C70 11.2 72.2 10 75 10C77.8 10 80 11.2 81.5 13.6C83 16 83.75 19 83.75 22.5C83.75 26 83 29 81.5 31.4C80 33.8 77.8 35 75 35ZM75 30C76.2 30 77.1 29.2 77.7 27.6C78.3 26 78.6 24 78.6 22.5C78.6 21 78.3 19 77.7 17.4C77.1 15.8 76.2 15 75 15C73.8 15 72.9 15.8 72.3 17.4C71.7 19 71.4 21 71.4 22.5C71.4 24 71.7 26 72.3 27.6C72.9 29.2 73.8 30 75 30Z" fill="url(#primaryGradient)" />
+    
+    <!-- Flowing Connection from O to p -->
+    <path d="M83 22.5C86 22.5 89 22.5 92 22.5" stroke="url(#accentGradient)" stroke-width="1" stroke-linecap="round" />
+    
+    <!-- p with stylized descender -->
+    <path d="M95 35C93 35 91.5 34.2 90.5 32.6C89.5 31 89 28.8 89 26V10H94V26C94 27.2 94.2 28.1 94.6 28.7C95 29.3 95.6 29.6 96.4 29.6C97.2 29.6 97.8 29.3 98.2 28.7C98.6 28.1 98.8 27.2 98.8 26V10H103.8V26C103.8 28.8 103.1 31 101.7 32.6C100.3 34.2 98.4 35 96 35H95Z" fill="url(#primaryGradient)" />
+    <path d="M94 35V45" stroke="url(#primaryGradient)" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Flowing Connection from p to e -->
+    <path d="M103 22.5C106 22.5 109 22.5 112 22.5" stroke="url(#accentGradient)" stroke-width="1" stroke-linecap="round" />
+    
+    <!-- e with creative touch -->
+    <path d="M116 35C113.6 35 111.7 34.2 110.3 32.6C108.9 31 108.2 28.8 108.2 26V19C108.2 16.2 108.9 14 110.3 12.4C111.7 10.8 113.6 10 116 10H117C119.4 10 121.3 10.8 122.7 12.4C124.1 14 124.8 16.2 124.8 19V21H113.2V26C113.2 27.2 113.4 28.1 113.8 28.7C114.2 29.3 114.8 29.6 115.6 29.6C116.4 29.6 117 29.3 117.4 28.7C117.8 28.1 118 27.2 118 26V24H124V26C124 28.8 123.3 31 121.9 32.6C120.5 34.2 118.6 35 116.2 35H116Z" fill="url(#primaryGradient)" />
+    <path d="M113.2 17H119.8V19C119.8 20.2 119.6 21.1 119.2 21.7C118.8 22.3 118.2 22.6 117.4 22.6C116.6 22.6 116 22.3 115.6 21.7C115.2 21.1 115 20.2 115 19V17H113.2Z" fill="url(#primaryGradient)" />
+    
+    <!-- Flowing Connection from e to r -->
+    <path d="M124 22.5C127 22.5 130 22.5 133 22.5" stroke="url(#accentGradient)" stroke-width="1" stroke-linecap="round" />
+    
+    <!-- r with stylized leg -->
+    <path d="M135 35C132.6 35 130.7 34.2 129.3 32.6C127.9 31 127.2 28.8 127.2 26V10H132.2V26C132.2 27.2 132.4 28.1 132.8 28.7C133.2 29.3 133.8 29.6 134.6 29.6C135.4 29.6 136 29.3 136.4 28.7C136.8 28.1 137 27.2 137 26V10H142V26C142 28.8 141.3 31 139.9 32.6C138.5 34.2 136.6 35 134.2 35H135Z" fill="url(#primaryGradient)" />
+    
+    <!-- Flowing Connection from r to a -->
+    <path d="M142 22.5C145 22.5 148 22.5 151 22.5" stroke="url(#accentGradient)" stroke-width="1" stroke-linecap="round" />
+    
+    <!-- a with creative touch -->
+    <path d="M153 35C150.6 35 148.7 34.2 147.3 32.6C145.9 31 145.2 28.8 145.2 26V19C145.2 16.2 145.9 14 147.3 12.4C148.7 10.8 150.6 10 153 10H154C156.4 10 158.3 10.8 159.7 12.4C161.1 14 161.8 16.2 161.8 19V26C161.8 28.8 161.1 31 159.7 32.6C158.3 34.2 156.4 35 154 35H153Z" fill="url(#primaryGradient)" />
+    <path d="M153 29.6C153.8 29.6 154.4 29.3 154.8 28.7C155.2 28.1 155.4 27.2 155.4 26V19C155.4 17.8 155.2 16.9 154.8 16.3C154.4 15.7 153.8 15.4 153 15.4C152.2 15.4 151.6 15.7 151.2 16.3C150.8 16.9 150.6 17.8 150.6 19V26C150.6 27.2 150.8 28.1 151.2 28.7C151.6 29.3 152.2 29.6 153 29.6Z" fill="url(#primaryGradient)" />
+    
+    <!-- Leads - with stylized connection -->
+    <!-- L -->
+    <path d="M175 35H170V10H175V35Z" fill="url(#blendGradient)" />
+    
+    <!-- e -->
+    <path d="M186 35C183.6 35 181.7 34.2 180.3 32.6C178.9 31 178.2 28.8 178.2 26V19C178.2 16.2 178.9 14 180.3 12.4C181.7 10.8 183.6 10 186 10H187C189.4 10 191.3 10.8 192.7 12.4C194.1 14 194.8 16.2 194.8 19V21H183.2V26C183.2 27.2 183.4 28.1 183.8 28.7C184.2 29.3 184.8 29.6 185.6 29.6C186.4 29.6 187 29.3 187.4 28.7C187.8 28.1 188 27.2 188 26V24H194V26C194 28.8 193.3 31 191.9 32.6C190.5 34.2 188.6 35 186.2 35H186Z" fill="url(#blendGradient)" />
+    <path d="M183.2 17H189.8V19C189.8 20.2 189.6 21.1 189.2 21.7C188.8 22.3 188.2 22.6 187.4 22.6C186.6 22.6 186 22.3 185.6 21.7C185.2 21.1 185 20.2 185 19V17H183.2Z" fill="url(#blendGradient)" />
+    
+    <!-- a -->
+    <path d="M206 35C203.6 35 201.7 34.2 200.3 32.6C198.9 31 198.2 28.8 198.2 26V19C198.2 16.2 198.9 14 200.3 12.4C201.7 10.8 203.6 10 206 10H207C209.4 10 211.3 10.8 212.7 12.4C214.1 14 214.8 16.2 214.8 19V26C214.8 28.8 214.1 31 212.7 32.6C211.3 34.2 209.4 35 207 35H206Z" fill="url(#blendGradient)" />
+    <path d="M206 29.6C206.8 29.6 207.4 29.3 207.8 28.7C208.2 28.1 208.4 27.2 208.4 26V19C208.4 17.8 208.2 16.9 207.8 16.3C207.4 15.7 206.8 15.4 206 15.4C205.2 15.4 204.6 15.7 204.2 16.3C203.8 16.9 203.6 17.8 203.6 19V26C203.6 27.2 203.8 28.1 204.2 28.7C204.6 29.3 205.2 29.6 206 29.6Z" fill="url(#blendGradient)" />
+    
+    <!-- d with stylized ascender -->
+    <path d="M225 35C222.6 35 220.7 34.2 219.3 32.6C217.9 31 217.2 28.8 217.2 26V19C217.2 16.2 217.9 14 219.3 12.4C220.7 10.8 222.6 10 225 10H226C228.4 10 230.3 10.8 231.7 12.4C233.1 14 233.8 16.2 233.8 19V26C233.8 28.8 233.1 31 231.7 32.6C230.3 34.2 228.4 35 226 35H225Z" fill="url(#blendGradient)" />
+    <path d="M225 29.6C225.8 29.6 226.4 29.3 226.8 28.7C227.2 28.1 227.4 27.2 227.4 26V19C227.4 17.8 227.2 16.9 226.8 16.3C226.4 15.7 225.8 15.4 225 15.4C224.2 15.4 223.6 15.7 223.2 16.3C222.8 16.9 222.6 17.8 222.6 19V26C222.6 27.2 222.8 28.1 223.2 28.7C223.6 29.3 224.2 29.6 225 29.6Z" fill="url(#blendGradient)" />
+    <path d="M233 10V5" stroke="url(#blendGradient)" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- s with creative flourish -->
+    <path d="M240 35C237.6 35 235.7 34.2 234.3 32.6C232.9 31 232.2 28.8 232.2 26V24H238V26C238 27.2 238.2 28.1 238.6 28.7C239 29.3 239.6 29.6 240.4 29.6C241.2 29.6 241.8 29.3 242.2 28.7C242.6 28.1 242.8 27.2 242.8 26V24C242.8 22.8 242.6 21.9 242.2 21.3C241.8 20.7 241.2 20.4 240.4 20.4H238V15H240.4C241.2 15 241.8 14.7 242.2 14.1C242.6 13.5 242.8 12.6 242.8 11.4V10C242.8 8.8 242.6 7.9 242.2 7.3C241.8 6.7 241.2 6.4 240.4 6.4C239.6 6.4 239 6.7 238.6 7.3C238.2 7.9 238 8.8 238 10V12H232.2V10C232.2 7.2 232.9 5 234.3 3.4C235.7 1.8 237.6 1 240 1H241C243.4 1 245.3 1.8 246.7 3.4C248.1 5 248.8 7.2 248.8 10V11.4C248.8 14.2 248.1 16.4 246.7 18C245.3 19.6 243.4 20.4 241 20.4V15C241.8 15 242.4 14.7 242.8 14.1C243.2 13.5 243.4 12.6 243.4 11.4V10C243.4 8.8 243.2 7.9 242.8 7.3C242.4 6.7 241.8 6.4 241 6.4H240C239.2 6.4 238.6 6.7 238.2 7.3C237.8 7.9 237.6 8.8 237.6 10V11.4C237.6 12.6 237.8 13.5 238.2 14.1C238.6 14.7 239.2 15 240 15H242.4V20.4H240C239.2 20.4 238.6 20.7 238.2 21.3C237.8 21.9 237.6 22.8 237.6 24V26C237.6 27.2 237.8 28.1 238.2 28.7C238.6 29.3 239.2 29.6 240 29.6C240.8 29.6 241.4 29.3 241.8 28.7C242.2 28.1 242.4 27.2 242.4 26V24H248.2V26C248.2 28.8 247.5 31 246.1 32.6C244.7 34.2 242.8 35 240.4 35H240Z" fill="url(#blendGradient)" />
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="175" cy="22.5" r="1.5" fill="url(#accentGradient)" />
+  <circle cx="194" cy="22.5" r="1.5" fill="url(#accentGradient)" />
+  <circle cx="214" cy="22.5" r="1.5" fill="url(#accentGradient)" />
+  <circle cx="232" cy="22.5" r="1.5" fill="url(#accentGradient)" />
+</svg>

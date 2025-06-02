@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# Import SEO Macros #}
+    {% import 'macros/seo.html' as seo %}
+    
+    {# Dynamic SEO Meta Tags #}
+    <title>{% block title %}Opera Leads - B2B Data Solutions{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Opera Leads - Leading provider of B2B data solutions. Specializing in data mining, email list building, contact list building, and more for targeted outreach campaigns.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}B2B data solutions, lead generation, data mining, email list building, contact list building, data cleansing, CRM data management, business growth{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Opera Leads - B2B Data Solutions{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Helping businesses connect with their ideal clients through accurate, reliable, and actionable data solutions since 2019.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:image" content="{% block og_image %}{{ url_for('static', filename='assets/og-image.svg', _external=True) }}{% endblock %}">
+    
+    <meta name="author" content="Opera Leads">
+    <meta name="theme-color" content="#6377EE">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='assets/apple-touch-icon.png') }}">
+    
+    {# Preload Critical Resources #}
+    <link rel="preload" href="{{ url_for('static', filename='assets/opera-lead-logo.svg') }}" as="image" type="image/svg+xml">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style">
+    
+    {# Modern Google Fonts #}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    {# Bootstrap CSS #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    {# Font Awesome #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    {# AOS Animation Library #}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    {# GSAP for Advanced Animations #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
+    
+    {# Custom CSS - Order matters for cascade #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accessibility.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pageheader.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/breadcrumbs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/newsletter.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/image-optimization.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error-pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background-shapes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/svg-backgrounds.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flipcard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonials.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sample_leads.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+    
+    {# Structured Data #}
+    {{ seo.structured_data_local_business() }}
+    
+    {{ seo.structured_data_webpage(
+        title=self.title()|default("Opera Leads - B2B Data Solutions"),
+        description=self.meta_description()|default("Opera Leads - Leading provider of B2B data solutions. Specializing in data mining, email list building, contact list building, and more for targeted outreach campaigns."),
+        url=request.url
+    ) }}
+    
+    {# Generate breadcrumbs based on current page #}
+    {% set breadcrumbs = [
+        {'name': 'Home', 'url': url_for('index', _external=True)}
+    ] %}
+    
+    {% if request.path != '/' %}
+        {% if request.path == '/about' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'About Us', 'url': url_for('about', _external=True)}
+            ] %}
+        {% elif request.path == '/services' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'Services', 'url': url_for('services', _external=True)}
+            ] %}
+        {% elif request.path == '/testimonials' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'Testimonials', 'url': url_for('testimonials', _external=True)}
+            ] %}
+        {% elif request.path == '/faq' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'FAQ', 'url': url_for('faq', _external=True)}
+            ] %}
+        {% elif request.path == '/sample-leads' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'Sample Leads', 'url': url_for('sample_leads', _external=True)}
+            ] %}
+        {% elif request.path == '/contact' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'Contact Us', 'url': url_for('contact', _external=True)}
+            ] %}
+        {% elif request.path == '/booking' %}
+            {% set breadcrumbs = breadcrumbs + [
+                {'name': 'Book Consultation', 'url': url_for('booking', _external=True)}
+            ] %}
+        {% endif %}
+        
+        {{ seo.structured_data_breadcrumbs(breadcrumbs) }}
+    {% endif %}
+</head>
+<body>
+    {# Accessibility Skip Link #}
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
+    {# Background Shapes #}
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+    
+    {# Navigation - Enhanced with ARIA roles and semantic HTML #}
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+            <div class="container-fluid nav-container">
+                <div class="navbar-brand-wrapper">
+                    <a class="navbar-brand" href="{{ url_for('index') }}" aria-label="Opera Leads Home">
+                        <img src="{{ url_for('static', filename='assets/opera-lead-logo.svg') }}" alt="Opera Leads Logo" width="180" height="54" class="custom-logo">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-backdrop"></div>
+                    <ul class="navbar-nav align-items-center main-menu">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}" aria-current="{% if request.path == '/' %}page{% endif %}">
+                                <span class="nav-text">Home</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="150">
+                            <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}" aria-current="{% if request.path == '/about' %}page{% endif %}">
+                                <span class="nav-text">About</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                            <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{{ url_for('services') }}" aria-current="{% if request.path == '/services' %}page{% endif %}">
+                                <span class="nav-text">Services</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link {% if request.path == '/testimonials' %}active{% endif %}" href="{{ url_for('testimonials') }}" aria-current="{% if request.path == '/testimonials' %}page{% endif %}">
+                                <span class="nav-text">Testimonials</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                            <a class="nav-link {% if request.path == '/faq' %}active{% endif %}" href="{{ url_for('faq') }}" aria-current="{% if request.path == '/faq' %}page{% endif %}">
+                                <span class="nav-text">FAQ</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="325">
+                            <a class="nav-link {% if request.path == '/sample-leads' %}active{% endif %}" href="{{ url_for('sample_leads') }}" aria-current="{% if request.path == '/sample-leads' %}page{% endif %}">
+                                <span class="nav-text">Sample Leads</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="350">
+                            <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{{ url_for('contact') }}" aria-current="{% if request.path == '/contact' %}page{% endif %}">
+                                <span class="nav-text">Contact</span>
+                                <span class="nav-dot"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-cta" data-aos="fade-left" data-aos-delay="400">
+                        <a class="btn-consultation" href="{{ url_for('booking') }}">
+                            <span>Book Free Sample</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {# Flash Messages #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container mt-5 pt-5" aria-live="polite">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+   <!-- --> {# Visual Breadcrumbs #}
+    {% if request.path != '/' %}
+    <div class="breadcrumbs-container">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                    {% if request.path == '/about' %}
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    {% elif request.path == '/services' %}
+                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    {% elif request.path == '/testimonials' %}
+                        <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                    {% elif request.path == '/faq' %}
+                        <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                    {% elif request.path == '/sample-leads' %}
+                        <li class="breadcrumb-item active" aria-current="page">Sample Leads</li>
+                    {% elif request.path == '/contact' %}
+                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    {% elif request.path == '/booking' %}
+                        <li class="breadcrumb-item active" aria-current="page">Book Consultation</li>
+                    {% endif %}
+                </ol>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+
+    {# Main Content - With ID for skip link #}
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Newsletter Section #}
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2>Stay Updated with Industry Insights</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for the latest B2B data trends, tips, and exclusive offers.</p>
+                    <form class="newsletter-form" action="#" method="post">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" aria-label="Email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-text text-center mt-2">
+                            We respect your privacy. Unsubscribe at any time.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Footer - Enhanced with semantic HTML and ARIA roles #}
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                {# Company Info Section #}
+                <div class="col-lg-4 mb-5 mb-lg-0 text-center text-lg-start">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='assets/logo.svg') }}" alt="Opera Leads Logo" width="160" height="48">
+                    </div>
+                    <div class="footer-info mt-4">
+                        <p class="text-muted">Opera Leads is a leading provider of B2B data solutions. We help businesses connect with their ideal clients through accurate, reliable, and actionable data.</p>
+                    </div>
+                    <div class="footer-cta mt-4">
+                        <a href="{{ url_for('booking') }}" class="btn btn-outline-light btn-sm">
+                            <i class="fas fa-calendar-check me-2"></i>Book a Free Consultation
+                        </a>
+                    </div>
+                    <div class="social-links mt-4 d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="#" target="_blank" aria-label="LinkedIn" title="Follow us on LinkedIn" class="social-link d-flex align-items-center justify-content-center">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Twitter" title="Follow us on Twitter" class="social-link d-flex align-items-center justify-content-center">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Facebook" title="Like us on Facebook" class="social-link d-flex align-items-center justify-content-center">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Instagram" title="Follow us on Instagram" class="social-link d-flex align-items-center justify-content-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                {# Quick Links Section #}
+                <div class="col-md-4 col-lg-2 mb-4 mb-lg-0 text-center text-md-start">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2">
+                            <a href="{{ url_for('index') }}" title="Home" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('about') }}" title="About Us" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}" title="Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('testimonials') }}" title="Testimonials" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Testimonials</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('faq') }}" title="FAQ" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>FAQ</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('sample_leads') }}" title="Sample Leads" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Sample Leads</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('contact') }}" title="Contact Us" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                {# Services Section #}
+                <div class="col-md-4 col-lg-3 mb-4 mb-lg-0 text-center text-md-start">
+                    <h5 class="footer-heading mb-3">Our Services</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#data-mining" title="Data Mining Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Data Mining</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#email-list" title="Email List Building Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Email List Building</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#contact-list" title="Contact List Building Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Contact List Building</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#data-cleansing" title="Data Cleansing Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Data Cleansing</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#data-scraping" title="Data Scraping Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>Data Scraping</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ url_for('services') }}#crm" title="CRM Data Management Services" class="d-flex align-items-center justify-content-center justify-content-md-start text-decoration-none">
+                                <i class="fas fa-chevron-right me-2 text-primary flex-shrink-0" style="font-size: 0.75rem; width: 12px;"></i>
+                                <span>CRM Data Management</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                {# Contact Section #}
+                <div class="col-md-4 col-lg-3 text-center text-md-start">
+                    <h5 class="footer-heading mb-3">Contact Us</h5>
+                    <address class="footer-contact-info">
+                        <div class="mb-3 d-flex align-items-start justify-content-center justify-content-md-start">
+                            <i class="fas fa-map-marker-alt me-3 text-primary mt-1 flex-shrink-0" style="width: 16px; font-size: 1rem;"></i>
+                            <span class="text-muted">Sardar Patel Colony, Ward No. 18, Burhanpur, Madhya Pradesh 450331, IN</span>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="fas fa-phone me-3 text-primary flex-shrink-0" style="width: 16px; font-size: 1rem;"></i>
+                            <a href="tel:+917869874458" class="text-decoration-none">+91 7869874458</a>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="fas fa-envelope me-3 text-primary flex-shrink-0" style="width: 16px; font-size: 1rem;"></i>
+                            <a href="mailto:shahrukh@operaleads.com" class="text-decoration-none">shahrukh@operaleads.com</a>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="fas fa-clock me-3 text-primary flex-shrink-0" style="width: 16px; font-size: 1rem;"></i>
+                            <span class="text-muted">Mon - Fri: 9:00 AM - 6:00 PM IST</span>
+                        </div>
+                    </address>
+                    <div class="mt-4">
+                        <a href="{{ url_for('contact') }}" class="btn btn-sm btn-outline-light">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mt-5 mb-4 border-light opacity-25">
+            
+            {# Footer Bottom #}
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0 text-center text-md-start">
+                    <p class="mb-0 text-muted">&copy; 2025 Opera Leads. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        <a href="#" title="Privacy Policy" class="text-decoration-none me-2">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="#" title="Terms of Service" class="text-decoration-none mx-2">Terms of Service</a>
+                        <span class="mx-1">|</span>
+                        <a href="{{ url_for('sitemap') }}" title="Sitemap" class="text-decoration-none ms-2">Sitemap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    {# Bootstrap Bundle with Popper #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    {# AOS Animation Library #}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    {# Custom JS #}
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/image-optimization.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out',
+            disable: 'mobile' // Disable on mobile for better performance
+        });
+        
+        // Initialize ScrollSpy for navbar highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                const scrollY = window.pageYOffset;
+                
+                sections.forEach(section => {
+                    const sectionHeight = section.offsetHeight;
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        current = sectionId;
+                    }
+                });
+                
+                // Update active nav link
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

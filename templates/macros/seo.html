@@ -1,0 +1,255 @@
+{# SEO Macros for reusable components #}
+
+{% macro meta_tags(title, description, keywords, canonical_url, og_image=none) %}
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="Opera Leads">
+    <meta name="robots" content="index, follow">
+    
+    {# Open Graph Tags #}
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ canonical_url }}">
+    {% if og_image %}
+        <meta property="og:image" content="{{ og_image }}">
+    {% else %}
+        <meta property="og:image" content="{{ url_for('static', filename='assets/og-image.svg', _external=True) }}">
+    {% endif %}
+    <meta property="og:site_name" content="Opera Leads">
+    <meta property="og:locale" content="en_US">
+    
+    {# Twitter Card Tags #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    {% if og_image %}
+        <meta name="twitter:image" content="{{ og_image }}">
+    {% else %}
+        <meta name="twitter:image" content="{{ url_for('static', filename='assets/og-image.svg', _external=True) }}">
+    {% endif %}
+    <meta name="twitter:site" content="@operaleads">
+    <meta name="twitter:creator" content="@operaleads">
+    
+    {# Additional SEO Meta Tags #}
+    <meta name="geo.region" content="IN-MP">
+    <meta name="geo.placename" content="Burhanpur">
+    <meta name="geo.position" content="21.3145;76.2325">
+    <meta name="ICBM" content="21.3145, 76.2325">
+    
+    {# Mobile Specific #}
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    {# Canonical URL #}
+    <link rel="canonical" href="{{ canonical_url }}">
+{% endmacro %}
+
+{% macro structured_data_local_business() %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Opera Leads",
+    "url": "{{ request.url_root }}",
+    "logo": "{{ url_for('static', filename='assets/logo.svg', _external=True) }}",
+    "image": "{{ url_for('static', filename='assets/og-image.svg', _external=True) }}",
+    "description": "Leading provider of B2B data solutions specializing in data mining, email list building, and contact list building.",
+    "foundingDate": "2019",
+    "founders": [
+        {
+            "@type": "Person",
+            "name": "Zakir Hussain"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sardar Patel Ward No. 18",
+        "addressLocality": "Burhanpur",
+        "addressRegion": "Madhya Pradesh",
+        "postalCode": "450331",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "21.3145",
+        "longitude": "76.2325"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7869874458",
+        "contactType": "customer service",
+        "email": "shahrukh@operaleads.com",
+        "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+        "https://www.linkedin.com/company/operaleads",
+        "https://twitter.com/operaleads",
+        "https://facebook.com/operaleads",
+        "https://instagram.com/operaleads"
+    ],
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        }
+    ],
+    "priceRange": "$$"
+}
+</script>
+{% endmacro %}
+
+{% macro structured_data_webpage(title, description, url, last_updated=none) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}",
+    "description": "{{ description }}",
+    "url": "{{ url }}",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "Opera Leads",
+        "url": "{{ request.url_root }}"
+    },
+    "inLanguage": "en-US",
+    "dateModified": "2025-05-21",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Opera Leads",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ url_for('static', filename='assets/logo.svg', _external=True) }}"
+        }
+    }
+}
+</script>
+{% endmacro %}
+
+{% macro structured_data_breadcrumbs(breadcrumbs) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {% for breadcrumb in breadcrumbs %}
+        {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": "{{ breadcrumb.name }}",
+            "item": "{{ breadcrumb.url }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro structured_data_article(title, description, url, author, published_date, modified_date=none, image=none) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "description": "{{ description }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ author }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Opera Leads",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ url_for('static', filename='assets/logo.svg', _external=True) }}"
+        }
+    },
+    "datePublished": "{{ published_date.strftime('%Y-%m-%d') }}",
+    {% if modified_date %}
+    "dateModified": "{{ modified_date.strftime('%Y-%m-%d') }}",
+    {% else %}
+    "dateModified": "{{ published_date.strftime('%Y-%m-%d') }}",
+    {% endif %}
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url }}"
+    },
+    {% if image %}
+    "image": {
+        "@type": "ImageObject",
+        "url": "{{ image }}"
+    }
+    {% else %}
+    "image": {
+        "@type": "ImageObject",
+        "url": "{{ url_for('static', filename='assets/og-image.svg', _external=True) }}"
+    }
+    {% endif %}
+}
+</script>
+{% endmacro %}
+
+{% macro structured_data_faq(faqs) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {% for faq in faqs %}
+        {
+            "@type": "Question",
+            "name": "{{ faq.question }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ faq.answer }}"
+            }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro structured_data_service(name, description, url, image=none, price=none, provider=none) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "{{ name }}",
+    "description": "{{ description }}",
+    "url": "{{ url }}",
+    {% if image %}
+    "image": "{{ image }}",
+    {% else %}
+    "image": "{{ url_for('static', filename='assets/og-image.svg', _external=True) }}",
+    {% endif %}
+    {% if price %}
+    "offers": {
+        "@type": "Offer",
+        "price": "{{ price.amount }}",
+        "priceCurrency": "{{ price.currency }}",
+        "availability": "https://schema.org/InStock"
+    },
+    {% endif %}
+    {% if provider %}
+    "provider": {
+        "@type": "Organization",
+        "name": "{{ provider }}"
+    },
+    {% else %}
+    "provider": {
+        "@type": "Organization",
+        "name": "Opera Leads"
+    },
+    {% endif %}
+    "areaServed": {
+        "@type": "Country",
+        "name": "Global"
+    }
+}
+</script>
+{% endmacro %}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#5163D6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#6377EE" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="40" cy="40" r="36" fill="#E6EAFF" />
+  
+  <!-- Contact Book Icon -->
+  <g filter="url(#shadow)">
+    <!-- Book Base -->
+    <path d="M20 16H60C62.2091 16 64 17.7909 64 20V60C64 62.2091 62.2091 64 60 64H20C17.7909 64 16 62.2091 16 60V20C16 17.7909 17.7909 16 20 16Z" fill="url(#gradient1)"/>
+    
+    <!-- Book Binding/Spine -->
+    <rect x="38" y="16" width="4" height="48" fill="#5163D6"/>
+    <rect x="36" y="16" width="8" height="4" fill="#5163D6"/>
+    <rect x="36" y="60" width="8" height="4" fill="#5163D6"/>
+    
+    <!-- Lines representing pages -->
+    <rect x="45" y="24" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="45" y="30" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="45" y="36" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="45" y="42" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="45" y="48" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="45" y="54" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    
+    <rect x="23" y="24" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="23" y="30" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="23" y="36" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="23" y="42" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="23" y="48" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+    <rect x="23" y="54" width="12" height="2" rx="1" fill="white" fill-opacity="0.7"/>
+  </g>
+  
+  <!-- User Contact Icons -->
+  <circle cx="24" cy="30" r="3" fill="white"/>
+  <circle cx="24" cy="42" r="3" fill="white"/>
+  <circle cx="24" cy="54" r="3" fill="white"/>
+  
+  <circle cx="56" cy="30" r="3" fill="white"/>
+  <circle cx="56" cy="42" r="3" fill="white"/>
+  <circle cx="56" cy="54" r="3" fill="white"/>
+  
+  <!-- User Silhouettes -->
+  <path d="M24 27C25.6569 27 27 25.6569 27 24C27 22.3431 25.6569 21 24 21C22.3431 21 21 22.3431 21 24C21 25.6569 22.3431 27 24 27Z" fill="white"/>
+  <path d="M56 27C57.6569 27 59 25.6569 59 24C59 22.3431 57.6569 21 56 21C54.3431 21 53 22.3431 53 24C53 25.6569 54.3431 27 56 27Z" fill="white"/>
+</svg>

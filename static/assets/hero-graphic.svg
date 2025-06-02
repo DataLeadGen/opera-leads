@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#5163D6" />
+    </linearGradient>
+    <linearGradient id="gradientTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#6377EE" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Elements -->
+  <circle cx="400" cy="300" r="240" fill="#F5F7FF" />
+  <circle cx="400" cy="300" r="180" fill="#EEF1FF" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="180" cy="150" r="20" fill="#E6EAFF" />
+  <circle cx="620" cy="450" r="25" fill="#E6EAFF" />
+  <circle cx="580" cy="120" r="15" fill="#E6EAFF" />
+  <circle cx="220" cy="480" r="18" fill="#E6EAFF" />
+
+  <!-- Main Dashboard Element -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="150" width="300" height="300" rx="20" fill="url(#gradientPurple)" />
+    
+    <!-- Dashboard Header -->
+    <rect x="250" y="150" width="300" height="50" rx="20" fill="#5163D6" />
+    <rect x="250" y="180" width="300" height="20" rx="0" fill="#5163D6" />
+    
+    <!-- Controls -->
+    <circle cx="275" cy="175" r="6" fill="white" fill-opacity="0.6" />
+    <circle cx="295" cy="175" r="6" fill="white" fill-opacity="0.6" />
+    <circle cx="315" cy="175" r="6" fill="white" fill-opacity="0.6" />
+    
+    <!-- Content Areas -->
+    <rect x="270" y="220" width="120" height="70" rx="8" fill="white" fill-opacity="0.15" />
+    <rect x="410" y="220" width="120" height="70" rx="8" fill="white" fill-opacity="0.15" />
+    <rect x="270" y="310" width="260" height="100" rx="8" fill="white" fill-opacity="0.15" />
+  </g>
+  
+  <!-- Data Visualization Elements -->
+  <!-- Chart 1 - Bar Chart -->
+  <rect x="280" y="250" width="15" height="30" rx="2" fill="url(#gradientTeal)" />
+  <rect x="300" y="235" width="15" height="45" rx="2" fill="url(#gradientTeal)" />
+  <rect x="320" y="225" width="15" height="55" rx="2" fill="url(#gradientTeal)" />
+  <rect x="340" y="240" width="15" height="40" rx="2" fill="url(#gradientTeal)" />
+  <rect x="360" y="260" width="15" height="20" rx="2" fill="url(#gradientTeal)" />
+  
+  <!-- Chart 2 - Line Chart -->
+  <path d="M420 270 L430 255 L450 260 L470 235 L490 245 L510 230" 
+        stroke="url(#gradientTeal)" stroke-width="3" stroke-linecap="round" fill="none" />
+  <circle cx="430" cy="255" r="4" fill="white" />
+  <circle cx="450" cy="260" r="4" fill="white" />
+  <circle cx="470" cy="235" r="4" fill="white" />
+  <circle cx="490" cy="245" r="4" fill="white" />
+  <circle cx="510" cy="230" r="4" fill="white" />
+  
+  <!-- Chart 3 - Area Chart -->
+  <path d="M270 380 L290 350 L320 365 L350 330 L380 345 L410 320 L440 335 L470 310 L500 350 L530 330 L530 410 L270 410 Z" 
+        fill="url(#gradientTeal)" fill-opacity="0.3" stroke="url(#gradientTeal)" stroke-width="2" />
+  
+  <!-- Data Points -->
+  <circle cx="290" cy="350" r="4" fill="white" />
+  <circle cx="320" cy="365" r="4" fill="white" />
+  <circle cx="350" cy="330" r="4" fill="white" />
+  <circle cx="380" cy="345" r="4" fill="white" />
+  <circle cx="410" cy="320" r="4" fill="white" />
+  <circle cx="440" cy="335" r="4" fill="white" />
+  <circle cx="470" cy="310" r="4" fill="white" />
+  <circle cx="500" cy="350" r="4" fill="white" />
+  <circle cx="530" cy="330" r="4" fill="white" />
+  
+  <!-- Floating Connection Elements -->
+  <g filter="url(#glow)">
+    <!-- Nodes -->
+    <circle cx="150" cy="250" r="25" fill="url(#gradientTeal)" />
+    <circle cx="200" cy="380" r="20" fill="url(#gradientTeal)" />
+    <circle cx="650" cy="200" r="22" fill="url(#gradientTeal)" />
+    <circle cx="600" cy="350" r="18" fill="url(#gradientTeal)" />
+    
+    <!-- Connections -->
+    <path d="M150 250 L250 200" stroke="#00DFD8" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M200 380 L270 380" stroke="#00DFD8" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M650 200 L550 180" stroke="#00DFD8" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M600 350 L550 350" stroke="#00DFD8" stroke-width="2" stroke-dasharray="4 4" />
+    
+    <!-- Data Icons inside Nodes -->
+    <text x="150" y="255" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="white">B2B</text>
+    <text x="200" y="385" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="12" fill="white">CRM</text>
+    <text x="650" y="205" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="white">DATA</text>
+    <text x="600" y="355" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">LEADS</text>
+  </g>
+  
+  <!-- Sparkle Elements -->
+  <circle cx="150" cy="250" r="3" fill="white" />
+  <circle cx="650" cy="200" r="3" fill="white" />
+  <circle cx="280" cy="130" r="2" fill="white" />
+  <circle cx="520" cy="130" r="2" fill="white" />
+  <circle cx="400" cy="480" r="2" fill="white" />
+</svg>

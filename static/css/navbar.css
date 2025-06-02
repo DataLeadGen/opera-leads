@@ -1,0 +1,249 @@
+/* Enhanced Navbar Styling */
+
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.custom-logo {
+    height: auto;
+    max-height: 54px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.scrolled .custom-logo {
+    max-height: 45px;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #6377EE;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.25s ease-in-out;
+}
+
+.top-bar {
+    margin-top: 0;
+    transform: rotate(0);
+}
+
+.middle-bar {
+    margin-top: 9px;
+    opacity: 1;
+}
+
+.bottom-bar {
+    margin-top: 18px;
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .top-bar {
+    margin-top: 0;
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    margin-top: 18px;
+    transform: rotate(0);
+}
+
+.navbar-toggler:not(.collapsed) .top-bar {
+    margin-top: 9px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+    margin-top: 9px;
+    transform: rotate(-135deg);
+}
+
+.navbar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.navbar-collapse.show .navbar-backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-menu {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.nav-item {
+    margin: 0 0.25rem;
+    position: relative;
+}
+
+.nav-link {
+    color: #262A37;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-dot {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.nav-link.active .nav-dot {
+    transform: translateX(-50%) scale(1);
+}
+
+
+
+.btn-consultation {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-1);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 119, 238, 0.3);
+}
+
+.btn-consultation:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 119, 238, 0.4);
+    color: white;
+}
+
+.btn-consultation i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-consultation:hover i {
+    transform: translateX(3px);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--bg-primary);
+        padding: 2rem;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    
+    .main-menu {
+        margin-right: 0;
+        margin-top: 2rem;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 0;
+    }
+    
+    .nav-dot {
+        bottom: 0;
+        left: -10px;
+    }
+    
+
+    
+    .navbar-cta {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .btn-consultation {
+        width: 100%;
+        justify-content: center;
+    }
+}

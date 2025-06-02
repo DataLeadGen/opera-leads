@@ -1,0 +1,261 @@
+{% extends 'layout.html' %}
+
+{% block title %}Contact Opera Leads - Get in Touch With Our Team{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-5 mt-5">
+                    <h1>Contact Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2>Get in Touch With Us</h2>
+                    <p class="lead">Have questions about our services or ready to start a project? Reach out to us today.</p>
+                    <div class="text-center my-4">
+                        <img src="{{ url_for('static', filename='assets/contact-illustration.svg') }}" alt="Contact Us" class="img-fluid animated-image" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form method="POST" action="{{ url_for('contact') }}" id="contact-form" novalidate>
+                            {{ form.csrf_token }}
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                {{ form.name(class="form-control", placeholder="Your name", required=true) }}
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                {{ form.email(class="form-control", placeholder="Your email address", required=true) }}
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                {{ form.phone(class="form-control", placeholder="Your phone number") }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name</label>
+                                {{ form.company(class="form-control", placeholder="Your company name") }}
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message *</label>
+                                {{ form.message(class="form-control", rows="5", placeholder="How can we help you?", required=true) }}
+                                <div class="invalid-feedback">
+                                    Please enter your message.
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 slide-in-right">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon animated-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Office Location</h5>
+                                <p>Sardar Patel Ward No. 18,<br>Burhanpur, Madhya Pradesh 450331, IN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon animated-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone Number</h5>
+                                <p><a href="tel:+917869874458">+91 7869874458</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon animated-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email Address</h5>
+                                <p><a href="mailto:zakir@dataleadgen.com">shahrukh@operaleads.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon animated-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Business Hours</h5>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h5>Connect With Us</h5>
+                            <div class="mt-3">
+                                <a href="#" target="_blank" class="me-2" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" target="_blank" class="me-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank" class="me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (using embedded iframe) -->
+    <section class="map-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 fade-in">
+                    <div class="map-container" style="height: 450px; border-radius: 15px; overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59602.98440130498!2d76.17827485000001!3d21.308877449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd832b3c72c9783%3A0xddeb78642f86aac0!2sBurhanpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1692610955168!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="faq-quick-links bg-light mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="lead mb-5">Have questions? Check out some of our most frequently asked questions below, or visit our comprehensive FAQ page.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <div class="accordion" id="faqAccordionLeft">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What types of businesses do you provide services for?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordionLeft">
+                                <div class="accordion-body">
+                                    We provide B2B data solutions for businesses of all sizes across various industries, including technology, healthcare, finance, manufacturing, education, and more. Our services are tailored to meet the specific needs of each client.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-3">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How accurate is your data?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordionLeft">
+                                <div class="accordion-body">
+                                    We pride ourselves on providing 100% updated and verified data. Our rigorous validation process ensures that you receive the most accurate and reliable information for your business needs. We continuously update our databases to maintain the highest standards of data quality.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="accordion" id="faqAccordionRight">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How long does it take to deliver my data?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body">
+                                    Delivery times vary depending on the scope and complexity of your project. Typically, smaller projects can be completed within 2-3 business days, while larger, more complex projects may take 1-2 weeks. We always provide an estimated timeline during our initial consultation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-3">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Do you offer custom data solutions?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body">
+                                    Yes, we specialize in creating custom data solutions tailored to your specific business needs. Whether you need data for a particular industry, region, company size, or other criteria, we can develop a customized solution that meets your exact requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="{{ url_for('faq') }}" class="btn btn-primary">View All FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2>Ready to Discuss Your Data Needs?</h2>
+                    <p>Schedule a free 15-minute consultation to explore how our data solutions can help you connect with potential clients and drive business growth.</p>
+                    <div class="mt-5">
+                        <a href="{{ url_for('booking') }}" class="btn btn-light">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Additional form validation
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            const emailInput = contactForm.querySelector('#email');
+            const validateEmail = (email) => {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            };
+            
+            emailInput.addEventListener('blur', function() {
+                if (this.value && !validateEmail(this.value)) {
+                    this.classList.add('is-invalid');
+                } else {
+                    this.classList.remove('is-invalid');
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

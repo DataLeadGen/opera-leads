@@ -1,0 +1,616 @@
+{% extends 'layout.html' %}
+
+{% block title %}FAQ - Frequently Asked Questions About Opera Leads Services{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-5 mt-5">
+                    <h1>Frequently Asked Questions</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-categories">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h2>Find Answers to Your Questions</h2>
+                    <p class="lead">Browse through our comprehensive FAQ to learn more about our services, processes, and how we can help your business grow.</p>
+                    <div class="text-center my-4">
+                        <img src="{{ url_for('static', filename='assets/faq-graphic.svg') }}" alt="Frequently Asked Questions" class="img-fluid animated-image" style="max-width: 500px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10">
+                    <div class="faq-tabs fade-in">
+                        <ul class="nav nav-pills nav-fill mb-4" id="faqTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="services-tab" data-bs-toggle="pill" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">Services</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pricing-tab" data-bs-toggle="pill" data-bs-target="#pricing" type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="process-tab" data-bs-toggle="pill" data-bs-target="#process" type="button" role="tab" aria-controls="process" aria-selected="false">Process</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="data-tab" data-bs-toggle="pill" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="false">Data Quality</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="tab-content" id="faqTabContent">
+                        <!-- General FAQs -->
+                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                            <div class="accordion" id="accordionGeneral">
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingG1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG1" aria-expanded="true" aria-controls="collapseG1">
+                                            What is Opera Leads and what services do you offer?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseG1" class="accordion-collapse collapse show" aria-labelledby="headingG1" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p>Opera Leads is a leading provider of B2B data solutions founded in 2019 by Zakir Hussain. We specialize in helping businesses connect with their ideal clients through accurate, reliable, and actionable data.</p>
+                                            <p>Our core services include:</p>
+                                            <ul>
+                                                <li>Data Mining</li>
+                                                <li>Email List Building & Cleaning</li>
+                                                <li>Contact List Building</li>
+                                                <li>Data Cleansing & Cleaning</li>
+                                                <li>Data Scraping & Extraction</li>
+                                                <li>Web & Google Maps Scraping</li>
+                                                <li>CRM Data Upgrading & Cleaning</li>
+                                                <li>Bulk Email Verification</li>
+                                            </ul>
+                                            <p>Our services support your outreach efforts through cold calling, email marketing, and LinkedIn prospecting, helping you connect with potential clients effectively and efficiently.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingG2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG2" aria-expanded="false" aria-controls="collapseG2">
+                                            What types of businesses do you work with?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseG2" class="accordion-collapse collapse" aria-labelledby="headingG2" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p>We work with businesses of all sizes across various industries, including but not limited to:</p>
+                                            <ul>
+                                                <li>Technology and SaaS companies</li>
+                                                <li>Healthcare and pharmaceutical organizations</li>
+                                                <li>Financial services and insurance firms</li>
+                                                <li>Manufacturing and industrial businesses</li>
+                                                <li>Educational institutions</li>
+                                                <li>Professional services (consulting, legal, accounting)</li>
+                                                <li>Retail and e-commerce companies</li>
+                                                <li>Real estate firms</li>
+                                            </ul>
+                                            <p>Whether you're a startup looking to build your first prospect database or an established enterprise seeking to refine and enhance your existing data, our solutions can be tailored to meet your specific needs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingG3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG3" aria-expanded="false" aria-controls="collapseG3">
+                                            How can I get started with Opera Leads?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseG3" class="accordion-collapse collapse" aria-labelledby="headingG3" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p>Getting started with Opera Leads is simple:</p>
+                                            <ol>
+                                                <li><strong>Consultation:</strong> Schedule a free 15-minute consultation through our <a href="{{ url_for('booking') }}">booking page</a> or by contacting us directly. During this call, we'll discuss your business needs and objectives.</li>
+                                                <li><strong>Proposal:</strong> Based on our discussion, we'll provide a tailored proposal outlining the recommended services, deliverables, timeline, and pricing.</li>
+                                                <li><strong>Onboarding:</strong> Once you approve the proposal, we'll gather any additional information needed and begin working on your project.</li>
+                                                <li><strong>Delivery:</strong> We'll deliver the data according to the agreed timeline and format, along with any recommendations for maximizing its use.</li>
+                                                <li><strong>Support:</strong> Our team remains available for any questions or additional assistance you might need after delivery.</li>
+                                            </ol>
+                                            <p>To get started immediately, <a href="{{ url_for('booking') }}">book your consultation</a> or <a href="{{ url_for('contact') }}">contact us</a> today.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingG4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG4" aria-expanded="false" aria-controls="collapseG4">
+                                            Where is Opera Leads located?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseG4" class="accordion-collapse collapse" aria-labelledby="headingG4" data-bs-parent="#accordionGeneral">
+                                        <div class="accordion-body">
+                                            <p>Opera Leads is headquartered in Sardar Patel Colony, Ward No. 18, Burhanpur, Madhya Pradesh 450331, India. However, we serve clients globally and provide remote services, allowing us to work with businesses anywhere in the world.</p>
+                                            <p>Our team of 10 skilled professionals, including 8 core team members, works collaboratively to deliver exceptional data solutions regardless of your location. We communicate via email, phone, video conferencing, and other digital channels to ensure smooth project execution and client satisfaction.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Services FAQs -->
+                        <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+                            <div class="accordion" id="accordionServices">
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingS1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="true" aria-controls="collapseS1">
+                                            What information is included in your contact lists?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseS1" class="accordion-collapse collapse show" aria-labelledby="headingS1" data-bs-parent="#accordionServices">
+                                        <div class="accordion-body">
+                                            <p>Our contact lists typically include the following information, though the specific details can be customized based on your requirements:</p>
+                                            <ul>
+                                                <li>Full name of the contact</li>
+                                                <li>Job title/designation</li>
+                                                <li>Company name</li>
+                                                <li>Email address (verified)</li>
+                                                <li>Phone number (direct line when available)</li>
+                                                <li>Company address</li>
+                                                <li>Company website</li>
+                                                <li>Industry/sector</li>
+                                                <li>Company size (number of employees)</li>
+                                                <li>Annual revenue (where available)</li>
+                                                <li>LinkedIn profile URL (when applicable)</li>
+                                                <li>Additional custom fields as required</li>
+                                            </ul>
+                                            <p>We ensure that all data is up-to-date, accurate, and compliant with relevant data protection regulations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingS2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS2" aria-expanded="false" aria-controls="collapseS2">
+                                            What is your email verification process?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseS2" class="accordion-collapse collapse" aria-labelledby="headingS2" data-bs-parent="#accordionServices">
+                                        <div class="accordion-body">
+                                            <p>Our comprehensive email verification process includes multiple layers to ensure maximum deliverability:</p>
+                                            <ol>
+                                                <li><strong>Syntax Check:</strong> We verify that email addresses follow the correct format (username@domain.com).</li>
+                                                <li><strong>Domain Verification:</strong> We check that the domain exists and has valid MX records for receiving email.</li>
+                                                <li><strong>Mailbox Verification:</strong> We verify that the specific mailbox exists on the domain without sending an actual email.</li>
+                                                <li><strong>Spam Trap Detection:</strong> We filter out known spam traps and honeypot addresses.</li>
+                                                <li><strong>Role-Based Email Detection:</strong> We identify and flag role-based emails (e.g., info@, sales@, support@).</li>
+                                                <li><strong>Disposable Email Detection:</strong> We identify temporary or disposable email addresses.</li>
+                                                <li><strong>Bounce History Check:</strong> When available, we check against known bounce history databases.</li>
+                                            </ol>
+                                            <p>After verification, we categorize emails as valid, invalid, or risky, providing you with clean, high-quality data that improves deliverability rates and protects your sender reputation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingS3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS3" aria-expanded="false" aria-controls="collapseS3">
+                                            How do you ensure the legality of your data scraping services?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseS3" class="accordion-collapse collapse" aria-labelledby="headingS3" data-bs-parent="#accordionServices">
+                                        <div class="accordion-body">
+                                            <p>We take legal and ethical considerations seriously in our data scraping practices:</p>
+                                            <ul>
+                                                <li>We only scrape publicly available information that is accessible without authentication.</li>
+                                                <li>We respect robots.txt files and website terms of service.</li>
+                                                <li>Our scraping practices are designed to minimize server load and avoid disrupting website functionality.</li>
+                                                <li>We do not extract personal or sensitive information protected by privacy laws.</li>
+                                                <li>We comply with relevant data protection regulations, including GDPR, CCPA, and other applicable laws.</li>
+                                                <li>Data is gathered for legitimate business purposes and used in accordance with legal requirements.</li>
+                                            </ul>
+                                            <p>Our team stays up-to-date with evolving legal standards and best practices in the data industry to ensure our services remain compliant while providing valuable business intelligence to our clients.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingS4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS4" aria-expanded="false" aria-controls="collapseS4">
+                                            What is involved in your CRM data cleaning service?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseS4" class="accordion-collapse collapse" aria-labelledby="headingS4" data-bs-parent="#accordionServices">
+                                        <div class="accordion-body">
+                                            <p>Our CRM data cleaning service is comprehensive and includes:</p>
+                                            <ul>
+                                                <li><strong>Duplicate Removal:</strong> Identifying and merging or removing duplicate records to prevent redundant outreach.</li>
+                                                <li><strong>Data Standardization:</strong> Ensuring consistent formatting for addresses, phone numbers, company names, etc.</li>
+                                                <li><strong>Information Verification:</strong> Checking and updating contact details, job titles, company information, etc.</li>
+                                                <li><strong>Data Enrichment:</strong> Adding missing information from reliable sources to complete profiles.</li>
+                                                <li><strong>Invalid Data Removal:</strong> Identifying and removing or correcting invalid entries, such as incorrect email formats or non-existent phone numbers.</li>
+                                                <li><strong>Obsolete Data Handling:</strong> Updating or removing outdated information, including contacts who have changed jobs or companies.</li>
+                                                <li><strong>Segmentation Enhancement:</strong> Improving data categorization and tagging for better targeting.</li>
+                                            </ul>
+                                            <p>We work with all major CRM platforms, including Salesforce, HubSpot, Zoho, Microsoft Dynamics, Pipedrive, and more. Our team can export data, clean it, and reimport it seamlessly, or provide guidance for your team to implement the changes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pricing FAQs -->
+                        <div class="tab-pane fade" id="pricing" role="tabpanel" aria-labelledby="pricing-tab">
+                            <div class="accordion" id="accordionPricing">
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingP1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP1" aria-expanded="true" aria-controls="collapseP1">
+                                            How do you structure your pricing?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseP1" class="accordion-collapse collapse show" aria-labelledby="headingP1" data-bs-parent="#accordionPricing">
+                                        <div class="accordion-body">
+                                            <p>Our pricing structure is flexible and based on several factors to ensure fair and transparent costs:</p>
+                                            <ul>
+                                                <li><strong>Project Scope:</strong> The size and complexity of your data requirements.</li>
+                                                <li><strong>Data Volume:</strong> The number of contacts or records needed.</li>
+                                                <li><strong>Data Points:</strong> The specific information fields required for each contact.</li>
+                                                <li><strong>Targeting Criteria:</strong> The specificity of your target audience (more specific targeting may involve more work).</li>
+                                                <li><strong>Turnaround Time:</strong> Standard or expedited delivery options.</li>
+                                                <li><strong>Ongoing vs. One-time:</strong> Whether you need a single project or recurring services.</li>
+                                            </ul>
+                                            <p>We offer both project-based pricing for one-time needs and subscription models for ongoing data requirements. Each client receives a customized quote based on their specific needs after our initial consultation.</p>
+                                            <p>For detailed pricing information relevant to your project, please <a href="{{ url_for('contact') }}">contact us</a> or <a href="{{ url_for('booking') }}">schedule a consultation</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingP2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP2" aria-expanded="false" aria-controls="collapseP2">
+                                            Do you offer any guarantees on your services?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseP2" class="accordion-collapse collapse" aria-labelledby="headingP2" data-bs-parent="#accordionPricing">
+                                        <div class="accordion-body">
+                                            <p>Yes, we stand behind the quality of our services with the following guarantees:</p>
+                                            <ul>
+                                                <li><strong>Data Accuracy Guarantee:</strong> We guarantee that our data meets the agreed-upon accuracy threshold (typically 95%+ for email deliverability and contact information).</li>
+                                                <li><strong>Replacement Guarantee:</strong> If any data points prove to be inaccurate or outdated within 30 days of delivery, we will replace them at no additional cost.</li>
+                                                <li><strong>Satisfaction Guarantee:</strong> If you're not satisfied with the quality of our work, we'll revise it according to the original requirements at no extra charge.</li>
+                                            </ul>
+                                            <p>Specific guarantees may vary by service type and project requirements, and all details are clearly outlined in our service agreements. Our goal is to ensure you receive reliable, actionable data that delivers value to your business.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingP3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP3" aria-expanded="false" aria-controls="collapseP3">
+                                            Are there any discounts for large volume orders?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseP3" class="accordion-collapse collapse" aria-labelledby="headingP3" data-bs-parent="#accordionPricing">
+                                        <div class="accordion-body">
+                                            <p>Yes, we offer tiered pricing that provides discounts for larger volume orders. As the number of contacts or records increases, the per-record cost typically decreases. This scaling model ensures cost-effectiveness for clients with substantial data needs.</p>
+                                            <p>Additionally, we offer:</p>
+                                            <ul>
+                                                <li><strong>Subscription Discounts:</strong> Clients who commit to ongoing monthly or quarterly services receive preferential rates compared to one-time projects.</li>
+                                                <li><strong>Package Discounts:</strong> When combining multiple services (e.g., data mining + email verification), we offer bundled pricing that's more economical than purchasing each service separately.</li>
+                                                <li><strong>Loyalty Discounts:</strong> Returning clients benefit from special rates as a thank you for their continued partnership.</li>
+                                            </ul>
+                                            <p>For specific discount information applicable to your project, please discuss your requirements during your consultation call.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingP4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP4" aria-expanded="false" aria-controls="collapseP4">
+                                            What payment methods do you accept?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseP4" class="accordion-collapse collapse" aria-labelledby="headingP4" data-bs-parent="#accordionPricing">
+                                        <div class="accordion-body">
+                                            <p>We offer a variety of payment methods to accommodate our global client base:</p>
+                                            <ul>
+                                                <li><strong>Bank Transfer/Wire:</strong> For both domestic and international transactions.</li>
+                                                <li><strong>Credit/Debit Cards:</strong> We accept all major cards including Visa, Mastercard, American Express, and Discover.</li>
+                                                <li><strong>PayPal:</strong> For secure online payments.</li>
+                                                <li><strong>Digital Payment Platforms:</strong> Including Stripe, Wise (formerly TransferWise), and other region-specific options.</li>
+                                            </ul>
+                                            <p>For larger projects, we typically request a 50% advance payment with the balance due upon project completion or at agreed milestones. For subscription services, we offer monthly, quarterly, or annual billing options.</p>
+                                            <p>All payment details, including invoicing, are discussed and finalized during the proposal phase of our engagement.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Process FAQs -->
+                        <div class="tab-pane fade" id="process" role="tabpanel" aria-labelledby="process-tab">
+                            <div class="accordion" id="accordionProcess">
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingPr1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePr1" aria-expanded="true" aria-controls="collapsePr1">
+                                            What is your typical project timeline?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsePr1" class="accordion-collapse collapse show" aria-labelledby="headingPr1" data-bs-parent="#accordionProcess">
+                                        <div class="accordion-body">
+                                            <p>Our project timelines vary based on the scope, complexity, and volume of the data required. Here's a general overview of our typical timelines:</p>
+                                            <ul>
+                                                <li><strong>Small Projects</strong> (up to 1,000 contacts with standard criteria): 2-3 business days</li>
+                                                <li><strong>Medium Projects</strong> (1,000-5,000 contacts or more complex criteria): 3-5 business days</li>
+                                                <li><strong>Large Projects</strong> (5,000+ contacts or highly specialized requirements): 5-10 business days</li>
+                                                <li><strong>Rush Services</strong>: Available for urgent needs with a 24-48 hour turnaround for smaller projects (additional fees may apply)</li>
+                                            </ul>
+                                            <p>All projects follow these key phases:</p>
+                                            <ol>
+                                                <li><strong>Requirements Gathering:</strong> Few Hour </li>
+                                                <li><strong>Initial Research & Strategy:</strong> After Getting the Requirements From Client</li>
+                                                <li><strong>Data Collection & Compilation:</strong> Varies based on project size</li>
+                                                <li><strong>Verification & Quality Assurance:</strong> 1-3 days</li>
+                                                <li><strong>Final Delivery & Review:</strong> 1 day</li>
+                                            </ol>
+                                            <p>We establish specific timelines for each project during the proposal phase and provide regular updates throughout the process.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingPr2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePr2" aria-expanded="false" aria-controls="collapsePr2">
+                                            How do you deliver the data?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsePr2" class="accordion-collapse collapse" aria-labelledby="headingPr2" data-bs-parent="#accordionProcess">
+                                        <div class="accordion-body">
+                                            <p>We offer multiple secure delivery options to suit your preferences and technical requirements:</p>
+                                            <ul>
+                                                <li><strong>File Formats:</strong>
+                                                    <ul>
+                                                        <li>Excel spreadsheets (.xlsx)</li>
+                                                        <li>CSV files</li>
+                                                        <li>Google Sheets</li>
+                                                        <li>Custom formats compatible with your CRM or marketing automation systems</li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Delivery Methods:</strong>
+                                                    <ul>
+                                                        <li>Secure email attachment (for smaller files)</li>
+                                                        <li>Secure cloud storage links (Google Drive, Dropbox, OneDrive, etc.)</li>
+                                                        <li>SFTP transfer for larger datasets or enhanced security</li>
+                                                        <li>Direct CRM import (available for select platforms)</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <p>All data transfers are encrypted and protected to ensure the security and confidentiality of the information. We'll discuss your preferred delivery method during our consultation and can accommodate special requirements as needed.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingPr3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePr3" aria-expanded="false" aria-controls="collapsePr3">
+                                            Do you offer ongoing data maintenance?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsePr3" class="accordion-collapse collapse" aria-labelledby="headingPr3" data-bs-parent="#accordionProcess">
+                                        <div class="accordion-body">
+                                            <p>Yes, we offer comprehensive data maintenance services to ensure your information remains accurate and valuable over time:</p>
+                                            <ul>
+                                                <li><strong>Regular Data Updates:</strong> Scheduled refreshes (monthly, quarterly, or custom intervals) to verify and update existing contact information.</li>
+                                                <li><strong>Database Enrichment:</strong> Ongoing enhancement of your database with additional data points and insights.</li>
+                                                <li><strong>Bounce Management:</strong> Processing of email bounce data to identify and update or remove invalid contacts.</li>
+                                                <li><strong>Change Detection:</strong> Monitoring for job changes, company relocations, and other significant updates among your contacts.</li>
+                                                <li><strong>Growth Expansion:</strong> Continuous addition of new contacts that match your target criteria as they become available.</li>
+                                            </ul>
+                                            <p>Our maintenance services are available as subscription packages with various levels of service frequency and depth. This approach ensures your data remains a valuable asset rather than deteriorating over time, which is common with B2B data (which typically degrades at 25-30% per year without maintenance).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingPr4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePr4" aria-expanded="false" aria-controls="collapsePr4">
+                                            What involvement is required from our team during the process?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsePr4" class="accordion-collapse collapse" aria-labelledby="headingPr4" data-bs-parent="#accordionProcess">
+                                        <div class="accordion-body">
+                                            <p>We've designed our process to minimize the burden on your team while ensuring we deliver exactly what you need. Here's what your involvement typically looks like:</p>
+                                            <ol>
+                                                <li><strong>Initial Consultation (30-60 minutes):</strong> A call with our team to discuss your requirements, goals, and expectations.</li>
+                                                <li><strong>Requirements Confirmation (15-30 minutes):</strong> Review and approval of our detailed project specifications document.</li>
+                                                <li><strong>Progress Updates:</strong> Brief check-ins at predetermined milestones (these can be handled via email or short calls based on your preference).</li>
+                                                <li><strong>Sample Review (if applicable):</strong> Quick review of a small data sample to ensure we're on the right track (typically 15-30 minutes).</li>
+                                                <li><strong>Final Delivery Review:</strong> Verification that the delivered data meets your requirements (time varies based on project size).</li>
+                                            </ol>
+                                            <p>For most projects, your total time commitment is approximately 1-3 hours spread over the project duration. We respect your time and have streamlined our processes to be efficient while maintaining clear communication throughout.</p>
+                                            <p>If you prefer a more hands-off approach, we can accommodate that as well, particularly for returning clients with established requirements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Quality FAQs -->
+                        <div class="tab-pane fade" id="data" role="tabpanel" aria-labelledby="data-tab">
+                            <div class="accordion" id="accordionData">
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingD1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseD1" aria-expanded="true" aria-controls="collapseD1">
+                                            How accurate is your data?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseD1" class="accordion-collapse collapse show" aria-labelledby="headingD1" data-bs-parent="#accordionData">
+                                        <div class="accordion-body">
+                                            <p>We maintain rigorous quality standards to ensure the highest possible data accuracy:</p>
+                                            <ul>
+                                                <li><strong>Email Accuracy:</strong> Our email verification process typically achieves 95-98% deliverability rates (meaning less than 5% bounce rate).</li>
+                                                <li><strong>Contact Information Accuracy:</strong> We maintain a 90%+ accuracy rate for phone numbers and job titles.</li>
+                                                <li><strong>Company Information Accuracy:</strong> Our company data (addresses, employee count, revenue, etc.) maintains a 95%+ accuracy rate.</li>
+                                            </ul>
+                                            <p>To achieve these high standards, we employ multiple verification methods:</p>
+                                            <ul>
+                                                <li>Automated verification tools and APIs</li>
+                                                <li>Cross-referencing multiple data sources</li>
+                                                <li>Manual verification by our team for critical data points</li>
+                                                <li>Real-time checking where applicable</li>
+                                                <li>Regular data refreshing to maintain currency</li>
+                                            </ul>
+                                            <p>We're transparent about our accuracy rates and provide detailed reporting on verification results. Additionally, our replacement guarantee ensures that any inaccurate data identified within 30 days of delivery will be replaced at no additional cost.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingD2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseD2" aria-expanded="false" aria-controls="collapseD2">
+                                            How frequently is your data updated?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseD2" class="accordion-collapse collapse" aria-labelledby="headingD2" data-bs-parent="#accordionData">
+                                        <div class="accordion-body">
+                                            <p>Our data updating processes follow a multi-tiered approach to ensure currency and relevance:</p>
+                                            <ul>
+                                                <li><strong>Core Database Refreshes:</strong> Our master database undergoes continuous updates, with complete refreshes on a quarterly basis.</li>
+                                                <li><strong>Industry-Specific Updates:</strong> For industries with higher turnover rates (like technology or sales), we perform more frequent updates (monthly or bi-monthly).</li>
+                                                <li><strong>Real-time Verification:</strong> Critical data points like email addresses are verified in real-time at the point of delivery.</li>
+                                                <li><strong>Event-Triggered Updates:</strong> We monitor for significant events (company acquisitions, leadership changes, etc.) and update relevant records accordingly.</li>
+                                                <li><strong>Client-Specific Data:</strong> For maintenance clients, we follow the agreed-upon schedule for updating your specific dataset (typically monthly or quarterly).</li>
+                                            </ul>
+                                            <p>B2B data naturally changes over time—people change jobs, companies restructure, and contact information updates. On average, B2B data deteriorates at a rate of approximately 25-30% per year. Our updating processes are designed to counteract this natural degradation and ensure your data remains highly accurate.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingD3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseD3" aria-expanded="false" aria-controls="collapseD3">
+                                            How do you source your data?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseD3" class="accordion-collapse collapse" aria-labelledby="headingD3" data-bs-parent="#accordionData">
+                                        <div class="accordion-body">
+                                            <p>We employ a multi-source approach to data collection that ensures comprehensive, accurate information:</p>
+                                            <ul>
+                                                <li><strong>Public Web Sources:</strong> Ethically scraping publicly available information from company websites, business directories, press releases, and other online sources.</li>
+                                                <li><strong>Professional Networks:</strong> Gathering publicly visible information from LinkedIn and other professional platforms (always in compliance with their terms of service).</li>
+                                                <li><strong>Business Registries:</strong> Accessing official government business registries and public filings.</li>
+                                                <li><strong>Industry Directories:</strong> Utilizing industry-specific directories and membership lists that are publicly accessible.</li>
+                                                <li><strong>Partnership Networks:</strong> Exchanging data with trusted partners to enhance and verify our information.</li>
+                                                <li><strong>Direct Verification:</strong> In some cases, directly contacting companies to verify information (particularly for high-value datasets).</li>
+                                            </ul>
+                                            <p>Our data collection processes strictly adhere to legal and ethical standards. We do not use unauthorized access methods, purchase data from questionable sources, or employ techniques that violate privacy regulations or platform terms of service.</p>
+                                            <p>After collection, all data undergoes our rigorous verification and cleaning process before being delivered to clients.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item fade-in">
+                                    <h2 class="accordion-header" id="headingD4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseD4" aria-expanded="false" aria-controls="collapseD4">
+                                            Is your data compliant with privacy regulations?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseD4" class="accordion-collapse collapse" aria-labelledby="headingD4" data-bs-parent="#accordionData">
+                                        <div class="accordion-body">
+                                            <p>Yes, we take data privacy and regulatory compliance very seriously. Our data collection, processing, and delivery practices comply with relevant privacy regulations, including:</p>
+                                            <ul>
+                                                <li><strong>GDPR (General Data Protection Regulation):</strong> For data related to EU residents and businesses.</li>
+                                                <li><strong>CCPA/CPRA (California Consumer Privacy Act/California Privacy Rights Act):</strong> For data related to California residents and businesses.</li>
+                                                <li><strong>CAN-SPAM Act:</strong> For email marketing compliance in the United States.</li>
+                                                <li><strong>CASL (Canadian Anti-Spam Legislation):</strong> For Canadian data and marketing activities.</li>
+                                                <li><strong>Other regional and country-specific regulations</strong> as applicable.</li>
+                                            </ul>
+                                            <p>Our compliance measures include:</p>
+                                            <ul>
+                                                <li>Collecting only business contact information (not personal data) where appropriate.</li>
+                                                <li>Ensuring legitimate interest basis for data processing.</li>
+                                                <li>Providing transparency about data sources and processing.</li>
+                                                <li>Respecting opt-out and erasure requests.</li>
+                                                <li>Implementing appropriate data security measures.</li>
+                                                <li>Maintaining records of processing activities.</li>
+                                            </ul>
+                                            <p>We also provide guidance to our clients on the compliant use of the data we provide, though we recommend consulting with your legal team regarding your specific use cases and jurisdictional requirements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Questions Section -->
+    <section class="other-questions bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center fade-in">
+                    <h2>Still Have Questions?</h2>
+                    <p class="lead mb-5">If you couldn't find the answer to your question, feel free to reach out to us directly.</p>
+                    <div class="cta-buttons">
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary me-3 mb-3 mb-md-0">Contact Us</a>
+                        <a href="{{ url_for('booking') }}" class="btn btn-outline-primary">Schedule a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 fade-in">
+                    <h2>Ready to Transform Your B2B Data Strategy?</h2>
+                    <p>Schedule a free 15-minute consultation to discuss how our data solutions can help you connect with potential clients and drive business growth.</p>
+                    <div class="mt-5">
+                        <a href="{{ url_for('booking') }}" class="btn btn-light">Book Consultation</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Activate pill based on hash in URL
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check for hash in URL
+        const hash = window.location.hash;
+        if (hash) {
+            // Try to activate the corresponding tab
+            const tabId = hash.replace('#', '');
+            const tabEl = document.querySelector(`#${tabId}-tab`);
+            if (tabEl) {
+                const tab = new bootstrap.Tab(tabEl);
+                tab.show();
+                
+                // Scroll to the tabs section with a slight delay to ensure rendering
+                setTimeout(() => {
+                    const tabsSection = document.querySelector('.faq-categories');
+                    if (tabsSection) {
+                        tabsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 200);
+            }
+        }
+        
+        // Update hash when tab changes
+        const tabEls = document.querySelectorAll('button[data-bs-toggle="pill"]');
+        tabEls.forEach(tabEl => {
+            tabEl.addEventListener('shown.bs.tab', function (event) {
+                const id = event.target.id.replace('-tab', '');
+                history.replaceState(null, null, `#${id}`);
+            });
+        });
+    });
+</script>
+{% endblock %}

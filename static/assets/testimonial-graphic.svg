@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C54E8" />
+      <stop offset="100%" stop-color="#0A42B7" />
+    </linearGradient>
+    <linearGradient id="gradientTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#6377EE" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" rx="20" fill="#F5F7FF"/>
+  
+  <!-- Testimonial Card -->
+  <rect x="50" y="50" width="500" height="300" rx="15" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Quote Marks -->
+  <path d="M100 120 L130 120 L130 90 L100 90 L100 120 M100 90 C100 70, 130 70, 130 90" 
+        fill="url(#gradientTeal)" opacity="0.8"/>
+  <path d="M150 120 L180 120 L180 90 L150 90 L150 120 M150 90 C150 70, 180 70, 180 90" 
+        fill="url(#gradientTeal)" opacity="0.6"/>
+  
+  <!-- Star Rating -->
+  <g transform="translate(100, 170)">
+    <path d="M0,0 L10,30 L40,30 L15,50 L25,80 L0,60 L-25,80 L-15,50 L-40,30 L-10,30 Z" fill="url(#gradientBlue)"/>
+  </g>
+  <g transform="translate(160, 170)">
+    <path d="M0,0 L10,30 L40,30 L15,50 L25,80 L0,60 L-25,80 L-15,50 L-40,30 L-10,30 Z" fill="url(#gradientBlue)"/>
+  </g>
+  <g transform="translate(220, 170)">
+    <path d="M0,0 L10,30 L40,30 L15,50 L25,80 L0,60 L-25,80 L-15,50 L-40,30 L-10,30 Z" fill="url(#gradientBlue)"/>
+  </g>
+  <g transform="translate(280, 170)">
+    <path d="M0,0 L10,30 L40,30 L15,50 L25,80 L0,60 L-25,80 L-15,50 L-40,30 L-10,30 Z" fill="url(#gradientBlue)"/>
+  </g>
+  <g transform="translate(340, 170)">
+    <path d="M0,0 L10,30 L40,30 L15,50 L25,80 L0,60 L-25,80 L-15,50 L-40,30 L-10,30 Z" fill="url(#gradientBlue)"/>
+  </g>
+  
+  <!-- Text Lines -->
+  <rect x="100" y="230" width="400" height="10" rx="5" fill="#E6EAFF"/>
+  <rect x="100" y="250" width="350" height="10" rx="5" fill="#E6EAFF"/>
+  <rect x="100" y="270" width="300" height="10" rx="5" fill="#E6EAFF"/>
+  
+  <!-- Profile Circle -->
+  <circle cx="450" cy="120" r="50" fill="url(#gradientBlue)" filter="url(#shadow)"/>
+  <circle cx="450" cy="100" r="15" fill="white"/>
+  <path d="M425 130 C425 110, 475 110, 475 130 L475 150 C475 165, 425 165, 425 150 Z" fill="white"/>
+  
+  <!-- Company Badge -->
+  <circle cx="500" cy="150" r="20" fill="url(#gradientTeal)" stroke="white" stroke-width="2"/>
+  <text x="500" y="155" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">B2B</text>
+</svg>

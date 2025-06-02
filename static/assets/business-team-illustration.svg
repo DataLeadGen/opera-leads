@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6377EE" />
+      <stop offset="100%" stop-color="#5163D6" />
+    </linearGradient>
+    <linearGradient id="gradientBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C54E8" />
+      <stop offset="100%" stop-color="#0A42B7" />
+    </linearGradient>
+    <linearGradient id="gradientTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#6377EE" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#F5F7FF" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="50" fill="#E6EAFF" />
+  <circle cx="850" cy="550" r="70" fill="#E6EAFF" />
+  <circle cx="800" cy="150" r="40" fill="#E6EAFF" />
+  <circle cx="200" cy="550" r="45" fill="#E6EAFF" />
+  
+  <!-- Modern Office Setting -->
+  <rect x="150" y="200" width="700" height="350" rx="20" fill="#EEF1FF" filter="url(#shadow)" />
+  
+  <!-- Office Floor Pattern -->
+  <path d="M150 550 L850 550" stroke="#D9E0FF" stroke-width="2" />
+  <path d="M250 550 L250 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  <path d="M350 550 L350 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  <path d="M450 550 L450 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  <path d="M550 550 L550 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  <path d="M650 550 L650 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  <path d="M750 550 L750 200" stroke="#D9E0FF" stroke-width="1" stroke-dasharray="5 5" />
+  
+  <!-- CEO/Founder -->
+  <g transform="translate(500, 350)">
+    <!-- Person Circle -->
+    <circle r="80" fill="url(#gradientBlue)" filter="url(#shadow)" />
+    
+    <!-- Head -->
+    <circle r="30" cy="-20" fill="#FFFFFF" />
+    
+    <!-- Body -->
+    <path d="M-35 30 C-35 0, 35 0, 35 30 L35 60 C35 80, -35 80, -35 60 Z" fill="#FFFFFF" />
+    
+    <!-- CEO Badge -->
+    <circle r="25" cx="50" cy="-50" fill="url(#gradientTeal)" stroke="white" stroke-width="3" />
+    <text x="50" y="-44" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="white">CEO</text>
+    
+    <!-- Name Tag -->
+    <rect x="-40" y="75" width="80" height="25" rx="5" fill="white" />
+    <text x="0" y="93" text-anchor="middle" font-family="Arial" font-size="14" fill="#0C54E8">Zakir Hussain</text>
+  </g>
+  
+  <!-- Team Member 1 - Data Analyst -->
+  <g transform="translate(300, 270)">
+    <!-- Person Circle -->
+    <circle r="60" fill="url(#gradientPurple)" fill-opacity="0.8" filter="url(#shadow)" />
+    
+    <!-- Head -->
+    <circle r="20" cy="-15" fill="#FFFFFF" />
+    
+    <!-- Body -->
+    <path d="M-25 20 C-25 0, 25 0, 25 20 L25 40 C25 55, -25 55, -25 40 Z" fill="#FFFFFF" />
+    
+    <!-- Role Badge -->
+    <circle r="20" cx="35" cy="-35" fill="url(#gradientTeal)" stroke="white" stroke-width="2" />
+    <text x="35" y="-30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">DATA</text>
+    
+    <!-- Name Tag -->
+    <rect x="-30" y="50" width="60" height="20" rx="5" fill="white" />
+    <text x="0" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#0C54E8">Data Analyst</text>
+  </g>
+  
+  <!-- Team Member 2 - Developer -->
+  <g transform="translate(700, 270)">
+    <!-- Person Circle -->
+    <circle r="60" fill="url(#gradientPurple)" fill-opacity="0.8" filter="url(#shadow)" />
+    
+    <!-- Head -->
+    <circle r="20" cy="-15" fill="#FFFFFF" />
+    
+    <!-- Body -->
+    <path d="M-25 20 C-25 0, 25 0, 25 20 L25 40 C25 55, -25 55, -25 40 Z" fill="#FFFFFF" />
+    
+    <!-- Role Badge -->
+    <circle r="20" cx="-35" cy="-35" fill="url(#gradientTeal)" stroke="white" stroke-width="2" />
+    <text x="-35" y="-30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">DEV</text>
+    
+    <!-- Name Tag -->
+    <rect x="-30" y="50" width="60" height="20" rx="5" fill="white" />
+    <text x="0" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#0C54E8">Developer</text>
+  </g>
+  
+  <!-- Team Member 3 - Marketing -->
+  <g transform="translate(350, 450)">
+    <!-- Person Circle -->
+    <circle r="60" fill="url(#gradientPurple)" fill-opacity="0.8" filter="url(#shadow)" />
+    
+    <!-- Head -->
+    <circle r="20" cy="-15" fill="#FFFFFF" />
+    
+    <!-- Body -->
+    <path d="M-25 20 C-25 0, 25 0, 25 20 L25 40 C25 55, -25 55, -25 40 Z" fill="#FFFFFF" />
+    
+    <!-- Role Badge -->
+    <circle r="20" cx="35" cy="-35" fill="url(#gradientTeal)" stroke="white" stroke-width="2" />
+    <text x="35" y="-30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">MKT</text>
+    
+    <!-- Name Tag -->
+    <rect x="-30" y="50" width="60" height="20" rx="5" fill="white" />
+    <text x="0" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#0C54E8">Marketing</text>
+  </g>
+  
+  <!-- Team Member 4 - CRM Specialist -->
+  <g transform="translate(650, 450)">
+    <!-- Person Circle -->
+    <circle r="60" fill="url(#gradientPurple)" fill-opacity="0.8" filter="url(#shadow)" />
+    
+    <!-- Head -->
+    <circle r="20" cy="-15" fill="#FFFFFF" />
+    
+    <!-- Body -->
+    <path d="M-25 20 C-25 0, 25 0, 25 20 L25 40 C25 55, -25 55, -25 40 Z" fill="#FFFFFF" />
+    
+    <!-- Role Badge -->
+    <circle r="20" cx="-35" cy="-35" fill="url(#gradientTeal)" stroke="white" stroke-width="2" />
+    <text x="-35" y="-30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">CRM</text>
+    
+    <!-- Name Tag -->
+    <rect x="-35" y="50" width="70" height="20" rx="5" fill="white" />
+    <text x="0" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#0C54E8">CRM Specialist</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <path d="M500 350 L300 270" stroke="#00DFD8" stroke-width="3" stroke-dasharray="5 5" />
+  <path d="M500 350 L700 270" stroke="#00DFD8" stroke-width="3" stroke-dasharray="5 5" />
+  <path d="M500 350 L350 450" stroke="#00DFD8" stroke-width="3" stroke-dasharray="5 5" />
+  <path d="M500 350 L650 450" stroke="#00DFD8" stroke-width="3" stroke-dasharray="5 5" />
+  
+  <!-- Company Stats -->
+  <g filter="url(#shadow)" transform="translate(250, 150)">
+    <rect width="120" height="60" rx="10" fill="url(#gradientBlue)" />
+    <text x="60" y="30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="white">Founded</text>
+    <text x="60" y="48" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="white">2019</text>
+  </g>
+  
+  <g filter="url(#shadow)" transform="translate(400, 150)">
+    <rect width="120" height="60" rx="10" fill="url(#gradientBlue)" />
+    <text x="60" y="30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="white">Team Size</text>
+    <text x="60" y="48" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="white">10</text>
+  </g>
+  
+  <g filter="url(#shadow)" transform="translate(550, 150)">
+    <rect width="120" height="60" rx="10" fill="url(#gradientBlue)" />
+    <text x="60" y="30" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="white">Clients</text>
+    <text x="60" y="48" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="white">250+</text>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C54E8" />
+      <stop offset="100%" stop-color="#0A42B7" />
+    </linearGradient>
+    <linearGradient id="gradientTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00DFD8" />
+      <stop offset="100%" stop-color="#00BCB6" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#6377EE" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="#F5F7FF"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="30" fill="#E6EAFF"/>
+  <circle cx="550" cy="350" r="35" fill="#E6EAFF"/>
+  <circle cx="500" cy="100" r="25" fill="#E6EAFF"/>
+  <circle cx="100" cy="300" r="20" fill="#E6EAFF"/>
+  
+  <!-- FAQ Cards -->
+  <g transform="translate(150, 120)" filter="url(#shadow)">
+    <rect width="300" height="70" rx="10" fill="white"/>
+    <rect width="300" height="20" rx="10" fill="url(#gradientBlue)"/>
+    
+    <!-- Q Icon -->
+    <circle cx="30" cy="45" r="15" fill="url(#gradientTeal)"/>
+    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="16" fill="white">Q</text>
+    
+    <!-- Text Lines -->
+    <rect x="60" y="35" width="220" height="6" rx="3" fill="#F0F0F0"/>
+    <rect x="60" y="50" width="180" height="6" rx="3" fill="#F0F0F0"/>
+  </g>
+  
+  <g transform="translate(180, 210)" filter="url(#shadow)">
+    <rect width="300" height="70" rx="10" fill="white"/>
+    <rect width="300" height="20" rx="10" fill="url(#gradientBlue)"/>
+    
+    <!-- Q Icon -->
+    <circle cx="30" cy="45" r="15" fill="url(#gradientTeal)"/>
+    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="16" fill="white">Q</text>
+    
+    <!-- Text Lines -->
+    <rect x="60" y="35" width="220" height="6" rx="3" fill="#F0F0F0"/>
+    <rect x="60" y="50" width="180" height="6" rx="3" fill="#F0F0F0"/>
+  </g>
+  
+  <g transform="translate(120, 300)" filter="url(#shadow)">
+    <rect width="300" height="70" rx="10" fill="white"/>
+    <rect width="300" height="20" rx="10" fill="url(#gradientBlue)"/>
+    
+    <!-- Q Icon -->
+    <circle cx="30" cy="45" r="15" fill="url(#gradientTeal)"/>
+    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="16" fill="white">Q</text>
+    
+    <!-- Text Lines -->
+    <rect x="60" y="35" width="220" height="6" rx="3" fill="#F0F0F0"/>
+    <rect x="60" y="50" width="180" height="6" rx="3" fill="#F0F0F0"/>
+  </g>
+  
+  <!-- Animated Elements - Question Marks -->
+  <g transform="translate(80, 160)">
+    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="40" fill="url(#gradientTeal)">?</text>
+  </g>
+  
+  <g transform="translate(500, 180)">
+    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="60" fill="url(#gradientTeal)">?</text>
+  </g>
+  
+  <g transform="translate(450, 300)">
+    <text x="0" y="0" font-family="Arial" font-weight="bold" font-size="50" fill="url(#gradientTeal)">?</text>
+  </g>
+  
+  <!-- FAQ Title -->
+  <g transform="translate(300, 60)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="28" fill="url(#gradientBlue)">Frequently Asked Questions</text>
+  </g>
+</svg>

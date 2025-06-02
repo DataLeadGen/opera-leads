@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for route_name, last_modified in routes.items() %}
+    <url>
+        <loc>{{ url_for(route_name, _external=True) }}</loc>
+        <lastmod>{{ last_modified.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>{% if route_name == 'index' %}weekly{% else %}monthly{% endif %}</changefreq>
+        <priority>{% if route_name == 'index' %}1.0{% elif route_name in ['contact', 'booking'] %}0.9{% elif route_name in ['about', 'services', 'sample_leads'] %}0.8{% else %}0.7{% endif %}</priority>
+    </url>
+    {% endfor %}
+</urlset>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Elements -->
+  <rect width="600" height="300" rx="15" fill="white"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="100" fill="url(#paint0_radial)" fill-opacity="0.05"/>
+  <circle cx="550" cy="250" r="100" fill="url(#paint1_radial)" fill-opacity="0.05"/>
+  
+  <!-- Quote Marks -->
+  <path d="M80 100C80 100 70 110 70 130C70 150 90 160 90 160C90 160 80 140 100 140C120 140 120 160 120 160C120 160 130 150 130 130C130 110 110 100 110 100" stroke="#6377EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <path d="M520 100C520 100 510 110 510 130C510 150 530 160 530 160C530 160 520 140 540 140C560 140 560 160 560 160C560 160 570 150 570 130C570 110 550 100 550 100" stroke="#00DFD8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Decorative Lines -->
+  <line x1="150" y1="50" x2="450" y2="50" stroke="#E1E5EB" stroke-width="2"/>
+  <line x1="150" y1="250" x2="450" y2="250" stroke="#E1E5EB" stroke-width="2"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 50) rotate(90) scale(100)">
+      <stop stop-color="#6377EE"/>
+      <stop offset="1" stop-color="#6377EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(550 250) rotate(90) scale(100)">
+      <stop stop-color="#00DFD8"/>
+      <stop offset="1" stop-color="#00DFD8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

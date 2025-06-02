@@ -1,0 +1,59 @@
+/* Breadcrumbs Styling */
+
+.breadcrumbs-container {
+    background-color: var(--light-gray);
+    padding: 0.75rem 0;
+    margin-top: 76px;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .breadcrumbs-container {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.breadcrumb-item {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-light);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: var(--text-lighter);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .breadcrumbs-container {
+        margin-top: 60px;
+        padding: 0.5rem 0;
+    }
+    
+    .breadcrumb-item {
+        font-size: 0.75rem;
+    }
+}
